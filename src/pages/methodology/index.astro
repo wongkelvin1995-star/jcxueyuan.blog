@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="推荐及编辑标准 · Academy Student Evaluation｜机场学院"
+  description="公开机场学院的学生友好度评价模型权重、独立编辑原则、三站定位差异及数据真实性规范。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '推荐及编辑标准' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>推荐及编辑标准 · Academy Student Evaluation</h1>
+      <div class="academy-card" style="margin-bottom:1.25rem;">
+        <h2>学生友好度评价权重</h2>
+        <ul>
+          <li><strong>学生消费预算（25%）：</strong>评估月付起步门槛及是否适合学生日常预算。</li>
+          <li><strong>新手使用难度（20%）：</strong>评估是否支持直接导入主流开源客户端及配置复杂度。</li>
+          <li><strong>套餐性价比（15%）：</strong>依据入门套餐单月每 GB 成本与流量配额评估。</li>
+          <li><strong>短周期购买灵活性（15%）：</strong>是否提供月付、季付或小额试错周期。</li>
+          <li><strong>客户端兼容性（10%）：</strong>覆盖 Windows、macOS、Android、iOS、Clash 与 Shadowrocket 的程度。</li>
+          <li><strong>教程及客服支持（10%）：</strong>是否有明确的官方教程与工单渠道。</li>
+          <li><strong>政策透明度（5%）：</strong>退款条款、流量重置规则与限制说明是否清晰。</li>
+        </ul>
+      </div>
+      <div class="notebook-card">
+        <h2>编辑独立性与禁止事项</h2>
+        <ul>
+          <li>绝不将 AFF 推广佣金比例作为客观推荐评分依据。</li>
+          <li>资料不足时不强行生成评分或虚构用户评价、销量与测速数据。</li>
+          <li>严格区分“真实月付售价”与“年付折合月均价格”。</li>
+          <li>不承诺任何品牌一定适用于所有高校校园网。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

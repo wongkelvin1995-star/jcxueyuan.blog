@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SakielCharacter from '../../components/art/SakielCharacter.astro';
+import MochiMascot from '../../components/art/MochiMascot.astro';
+---
+
+<BaseLayout
+  title="关于机场学院（jcxueyuan.blog）与原创角色说明｜机场学院"
+  description="了解机场学院的创立理念、原创虚构角色 SAKIEL 樱羽学姐与 MOCHI 樱团设定，以及内容团队编辑原则。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '关于学院' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>关于机场学院 · Airport Academy</h1>
+      <div class="academy-card" style="margin-bottom:1.5rem;">
+        <p>
+          <strong>机场学院（jcxueyuan.blog）</strong> 是一个面向学生党、大学生及零基础用户的中文网络知识与选购博客。我们的核心理念是：<strong>先学会，再选择，最后才考虑购买</strong>。
+        </p>
+        <p>
+          本站定位为独立的知识资讯与选购整理平台，不冒充任何真实大学、教育机构或机场服务商。
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="academy-card" style="display:flex;gap:1rem;align-items:center;">
+          <div style="width:92px;height:92px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--sakura-pink);">
+            <SakielCharacter state="welcome" size={92} />
+          </div>
+          <div>
+            <h3>SAKIEL · 樱羽学姐</h3>
+            <p style="font-size:0.88rem;margin:0;">
+              22 岁虚构大学高年级学生及机场学院学习向导，温柔、知性、耐心。用于首页引导、课程章节、预算工具与故障答疑（虚构品牌角色，不冒充真实教师或专家）。
+            </p>
+          </div>
+        </div>
+        <div class="academy-card" style="display:flex;gap:1rem;align-items:center;">
+          <MochiMascot mood="cheer" size={100} />
+          <div>
+            <h3>MOCHI · 樱团</h3>
+            <p style="font-size:0.88rem;margin:0;">
+              机场学院原创白粉色兔子知识精灵，头戴迷你学士帽与樱花发饰，用于搜索联想、计算器、知识测试与学习完成反馈。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

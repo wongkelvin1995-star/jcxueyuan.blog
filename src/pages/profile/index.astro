@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProfileCenter from '../../components/tools/ProfileCenter';
+---
+
+<BaseLayout
+  title="我的学院 · 个人学习中心｜机场学院"
+  description="管理你在机场学院的课程进度、学习笔记、收藏品牌、预算与流量计算记录以及阅读设置。"
+  noIndex={true}
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '我的学院' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <ProfileCenter client:load />
+    </div>
+  </section>
+</BaseLayout>

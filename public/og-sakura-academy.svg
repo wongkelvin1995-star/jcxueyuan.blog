@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F2" />
+      <stop offset="50%" stop-color="#FDEBF2" />
+      <stop offset="100%" stop-color="#D9D0EB" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogBg)" />
+  <circle cx="960" cy="180" r="220" fill="#F2B8CD" opacity="0.35" />
+  <circle cx="190" cy="520" r="180" fill="#A9D5EB" opacity="0.3" />
+  <rect x="72" y="72" width="1056" height="486" rx="32" fill="#FFFFFF" fill-opacity="0.82" stroke="#F2B8CD" stroke-width="2" />
+  <text x="128" y="170" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#AD557D">SAKURA ACADEMY MAX · JCXUEYUAN.BLOG</text>
+  <text x="128" y="265" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="62" font-weight="800" fill="#3E2F43">机场学院 · 樱羽学姐学习指南</text>
+  <text x="128" y="338" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="30" fill="#57465C">2027学生党低预算选购 · 零基础入门 · 客户端教程 · 故障排查</text>
+  <text x="128" y="420" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="24" fill="#75637A">先学会，再选择，最后才考虑购买 · Every Connection Begins with Learning.</text>
+  <rect x="128" y="468" width="240" height="52" rx="26" fill="#AD557D" />
+  <text x="248" y="502" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">进入学院课堂 →</text>
+</svg>

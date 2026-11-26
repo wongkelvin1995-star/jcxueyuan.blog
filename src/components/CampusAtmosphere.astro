@@ -1,0 +1,106 @@
+---
+/* 轻量化程序化樱花粒子与随滚动变化的校园天空背景（严格遵守 prefers-reduced-motion 与性能限制） */
+---
+
+<div class="campus-atmosphere" aria-hidden="true">
+  <div class="sky-gradient-layer" id="sky-gradient-layer"></div>
+  <div class="sakura-petals-layer">
+    <span class="petal p1"></span>
+    <span class="petal p2"></span>
+    <span class="petal p3"></span>
+    <span class="petal p4"></span>
+    <span class="petal p5"></span>
+    <span class="petal p6"></span>
+    <span class="petal p7"></span>
+    <span class="petal p8"></span>
+  </div>
+</div>
+
+<style>
+  .campus-atmosphere {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .sky-gradient-layer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #FFF8F2 0%, rgba(253, 235, 242, 0.45) 50%, rgba(235, 245, 251, 0.45) 100%);
+    transition: background 1.1s ease;
+  }
+
+  .sakura-petals-layer {
+    position: absolute;
+    inset: 0;
+  }
+
+  .petal {
+    position: absolute;
+    top: -5%;
+    width: 12px;
+    height: 9px;
+    background: radial-gradient(circle at 30% 30%, #FFE6EF, #F2B8CD);
+    border-radius: 75% 15% 75% 15%;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: sakuraFall 16s linear infinite;
+  }
+
+  .p1 { left: 8%; animation-delay: 0s; animation-duration: 15s; }
+  .p2 { left: 22%; animation-delay: 3.5s; animation-duration: 18s; width: 10px; height: 7px; }
+  .p3 { left: 38%; animation-delay: 1.8s; animation-duration: 17s; }
+  .p4 { left: 54%; animation-delay: 6s; animation-duration: 19s; width: 14px; height: 10px; }
+  .p5 { left: 70%; animation-delay: 2.4s; animation-duration: 16s; }
+  .p6 { left: 84%; animation-delay: 5s; animation-duration: 20s; width: 11px; height: 8px; }
+  .p7 { left: 93%; animation-delay: 8.2s; animation-duration: 17s; }
+  .p8 { left: 46%; animation-delay: 9.5s; animation-duration: 21s; width: 9px; height: 7px; }
+
+  @media (max-width: 768px) {
+    /* 移动端减少粒子以保证流畅度 */
+    .p3, .p5, .p7, .p8 {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // 随滚动缓慢变化背景氛围：樱花清晨 -> 奶油白校园 -> 晴空午后 -> 浪漫紫黄昏 -> 暖金夕阳 -> 月夜学院
+  const skyLayer = document.getElementById('sky-gradient-layer');
+  const phases = [
+    'linear-gradient(180deg, #FFF8F2 0%, rgba(253, 235, 242, 0.52) 55%, rgba(235, 245, 251, 0.45) 100%)',
+    'linear-gradient(180deg, #FFF8F2 0%, rgba(255, 248, 242, 0.9) 60%, rgba(242, 184, 205, 0.16) 100%)',
+    'linear-gradient(180deg, #F5FAFD 0%, rgba(169, 213, 235, 0.22) 55%, #FFF8F2 100%)',
+    'linear-gradient(180deg, #F7F3FC 0%, rgba(217, 208, 235, 0.34) 55%, #FFF8F2 100%)',
+    'linear-gradient(180deg, #FDF6EE 0%, rgba(228, 198, 157, 0.28) 55%, #FDEBF2 100%)',
+    'linear-gradient(180deg, #F3F2F9 0%, rgba(87, 70, 92, 0.12) 55%, #F9EFF4 100%)',
+  ];
+
+  let lastPhase = -1;
+  let ticking = false;
+
+  function updateSkyPhase() {
+    ticking = false;
+    if (!skyLayer) return;
+    const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const ratio = Math.min(0.999, Math.max(0, window.scrollY / maxScroll));
+    const idx = Math.floor(ratio * phases.length);
+    if (idx !== lastPhase) {
+      lastPhase = idx;
+      skyLayer.style.background = phases[idx];
+    }
+  }
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateSkyPhase);
+      }
+    },
+    { passive: true }
+  );
+</script>

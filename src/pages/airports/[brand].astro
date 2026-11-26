@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SakielCharacter from '../../components/art/SakielCharacter.astro';
+import { AIRPORTS, evaluateStudentFriendliness, type AirportBrand } from '../../data/airports';
+
+export function getStaticPaths() {
+  return AIRPORTS.map((brand) => ({
+    params: { brand: brand.slug },
+    props: { brand },
+  }));
+}
+
+interface Props {
+  brand: AirportBrand;
+}
+
+const { brand } = Astro.props;
+const ev = evaluateStudentFriendliness(brand);
+---
+
+<BaseLayout
+  title={`${brand.name}（${brand.englishName}）学生选购档案与套餐核验｜机场学院`}
+  description={`${brand.name} 完整套餐价格、月付年付对比、学生友好度评分、客户端兼容性、退款政策及优惠码 ${brand.couponCode} 核验记录。`}
+  breadcrumbs={[
+    { label: '首页', url: '/' },
+    { label: '全部机场品牌', url: '/airports/' },
+    { label: brand.name },
+  ]}
+>
+  <section class="section-block">
+    <div class="container">
+      <!-- 1. 品牌名称及介绍 -->
+      <div class="glass-panel" style="padding:1.75rem;margin-bottom:1.5rem;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.5rem;">
+              <span class="badge badge-sakura">档案编号 #{String(brand.order).padStart(2, '0')}</span>
+              <span class="badge badge-mint">✓ 已核验</span>
+              <span class="badge badge-mint">学生友好度 {ev.totalScore ?? '—'} 分</span>
+              <span class="badge badge-purple">{ev.difficultyLabel}</span>
+            </div>
+            <h1>{brand.name}（{brand.englishName}）学生选购档案</h1>
+            <p style="margin-bottom:0.5rem;">{brand.summary}</p>
+            <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:0;">
+              定位：{brand.positioning} · 价格核验日期：{brand.priceDate}
+            </p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;min-width:190px;">
+            <a href={brand.affUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">
+              前往品牌官网 ↗
+            </a>
+            <button type="button" class="btn btn-secondary btn-sm" id="fav-brand-btn" data-slug={brand.slug} data-name={brand.name}>
+              🎀 收藏到我的学院
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 学姐选购点评 -->
+      <div class="senpai-dialogue" style="margin-bottom:1.5rem;">
+        <div class="senpai-dialogue-avatar">
+          <SakielCharacter state="teaching" size={80} />
+        </div>
+        <div>
+          <strong style="color:var(--rose-deep);">SAKIEL · 樱羽学姐选购点评</strong>
+          <p style="margin:0.35rem 0;">
+            {brand.minMonthlyPrice
+              ? `${brand.name} 支持 ¥${brand.minMonthlyPrice}/月起的真实月付起步，对于想先短周期试错的同学较为友好。`
+              : `${brand.name} 当前已核验记录中暂无纯月付起步选项，建议充分评估长期预付风险后再决定。`}
+            {' '}第三方订阅方面：{brand.subscriptionPolicy.summary}
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+            {ev.evidenceNotes.map((n) => (
+              <span class="badge badge-sky">{n}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 完整套餐价格 -->
+      <div class="academy-card" style="margin-bottom:1.5rem;">
+        <h2>完整套餐价格表（核验日期：{brand.priceDate}）</h2>
+        <p style="font-size:0.86rem;color:var(--text-muted);">
+          注：以下为历史公开记录价格，请区分真实月付售价与年付折合月均，最终结算以品牌官网实时页面为准。
+        </p>
+        <div class="table-scroll">
+          <table class="academy-table">
+            <thead>
+              <tr>
+                <th>套餐名称</th>
+                <th>月付</th>
+                <th>季付</th>
+                <th>半年付</th>
+                <th>年付</th>
+                <th>一次性 / 其他</th>
+                <th>流量配额</th>
+              </tr>
+            </thead>
+            <tbody>
+              {brand.plans.map((p) => (
+                <tr>
+                  <td><strong>{p.name}</strong>{p.note ? <div style="font-size:0.78rem;color:var(--text-muted);">{p.note}</div> : null}</td>
+                  <td>{p.monthly !== null ? `¥${p.monthly}` : '—'}</td>
+                  <td>{p.quarterly !== null ? `¥${p.quarterly}` : '—'}</td>
+                  <td>{p.halfYearly !== null ? `¥${p.halfYearly}` : '—'}</td>
+                  <td>{p.yearly !== null ? `¥${p.yearly}` : '—'}</td>
+                  <td>{p.oneTimePrice ? `¥${p.oneTimePrice}（一次性）` : p.isCustom ? '定制' : '—'}</td>
+                  <td>{p.dataText}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 4-12. 核心维度对比网格 -->
+      <div class="grid-2" style="margin-bottom:1.5rem;">
+        <div class="academy-card">
+          <h3>学生预算、短周期与流量规则</h3>
+          <ul>
+            <li><strong>月付门槛：</strong>{brand.minMonthlyPrice ? `¥${brand.minMonthlyPrice}/月` : '暂无纯月付记录'}</li>
+            <li><strong>年付门槛：</strong>{brand.minYearlyPrice ? `¥${brand.minYearlyPrice}/年` : '无'}</li>
+            <li><strong>并发设备数：</strong>{brand.concurrentDevices}</li>
+            <li><strong>节点地区：</strong>{brand.regions.join('、')}</li>
+            <li><strong>线路与协议：</strong>{brand.lines.join(' / ')} · {brand.protocols.join(' / ')}</li>
+          </ul>
+        </div>
+
+        <div class="academy-card">
+          <h3>电脑与手机客户端兼容性</h3>
+          <ul>
+            <li><strong>Windows：</strong>{brand.devices.windows.label}（{brand.devices.windows.note}）</li>
+            <li><strong>macOS：</strong>{brand.devices.macos.label}（{brand.devices.macos.note}）</li>
+            <li><strong>Android：</strong>{brand.devices.android.label}（{brand.devices.android.note}）</li>
+            <li><strong>iOS / iPadOS：</strong>{brand.devices.ios.label}（{brand.devices.ios.note}）</li>
+            <li><strong>Clash / Shadowrocket：</strong>{brand.devices.clash.label} / {brand.devices.shadowrocket.label}</li>
+          </ul>
+        </div>
+
+        <div class="academy-card">
+          <h3>校园网与 AI / 国际课程条件</h3>
+          <p style="font-size:0.9rem;">
+            <strong>校园网络限制说明：</strong>未实际在特定高校实测前，不承诺该品牌一定适用于所有校园网。校园网受限于端口策略与认证机制，建议先选最短周期验证。
+          </p>
+          <p style="font-size:0.9rem;margin-bottom:0;">
+            <strong>AI 与学术课程支持记录：</strong>{brand.aiSupport.supportedList.join('、') || '见服务条款'}（{brand.aiSupport.evidenceNote}）
+          </p>
+        </div>
+
+        <div class="academy-card">
+          <h3>退款、续费与长期预付风险</h3>
+          <p style="font-size:0.9rem;"><strong>退款政策：</strong>{brand.refundPolicy}</p>
+          <p style="font-size:0.9rem;margin-bottom:0;">
+            <strong>推广优惠码：</strong><code>{brand.couponCode}</code>（来源：{brand.couponEvidence}）
+          </p>
+        </div>
+      </div>
+
+      <!-- 13-15. 适合与不适合人群 + 注意事项 -->
+      <div class="grid-2" style="margin-bottom:1.5rem;">
+        <div class="notebook-card">
+          <h3 style="margin-top:0;">适合人群</h3>
+          <ul>
+            {brand.suitableFor.map((s) => <li>{s}</li>)}
+          </ul>
+          <h3>不适合人群</h3>
+          <ul>
+            {brand.notSuitableFor.map((s) => <li>{s}</li>)}
+          </ul>
+        </div>
+
+        <div class="notebook-card">
+          <h3 style="margin-top:0;">核验备注与资料来源</h3>
+          <ul>
+            {brand.conflictsAndNotes.map((c) => <li>{c}</li>)}
+          </ul>
+          <p style="font-size:0.85rem;color:var(--text-muted);">
+            官方展示信息：{brand.officialSite}<br />
+            原始价格参考来源：{brand.priceSourceUrl}<br />
+            资料核验日期：{brand.priceDate}
+          </p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <a href="/buying/checklist/" class="btn btn-sm btn-soft">首购避坑清单</a>
+            <a href="/contact/" class="btn btn-sm btn-soft">数据纠错</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const favBtn = document.getElementById('fav-brand-btn');
+  favBtn?.addEventListener('click', () => {
+    const slug = favBtn.getAttribute('data-slug') || '';
+    const name = favBtn.getAttribute('data-name') || '';
+    try {
+      const key = 'sakura_academy_profile_v1';
+      const raw = localStorage.getItem(key);
+      const data = raw ? JSON.parse(raw) : { favoriteBrands: [] };
+      data.favoriteBrands = data.favoriteBrands || [];
+      const exists = data.favoriteBrands.some((b: any) => b.slug === slug);
+      if (!exists) {
+        data.favoriteBrands.push({ slug, name });
+        localStorage.setItem(key, JSON.stringify(data));
+        favBtn.textContent = '★ 已收藏到我的学院';
+      } else {
+        favBtn.textContent = '★ 已在收藏夹中';
+      }
+    } catch {}
+  });
+</script>

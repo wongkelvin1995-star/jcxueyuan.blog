@@ -1,0 +1,4183 @@
+[
+  {
+    "order": 1,
+    "id": "lingdongyun",
+    "slug": "lingdongyun",
+    "name": "灵动云",
+    "englishName": "LingDongYun",
+    "couponCode": "ld888",
+    "affUrl": "https://varnexa.lingdongaff.com/#/?code=HHoxxHGa",
+    "priceDate": "2026-10-31",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/lingdongyun/",
+    "aliases": [
+      "灵动云机场"
+    ],
+    "officialSite": "https://www.lingdongyun.site/（品牌介绍及套餐展示站）；其与 AFF 后台运营主体的归属关系尚未独立确认。",
+    "summary": "灵动云提供覆盖香港、台湾、日本、新加坡和美国等地区的网络代理节点服务，采用月付、年付、一次性流量包及私人定制等套餐形式，提供 Windows、macOS、Android 官方客户端及 iOS 的 Nextin 接入方案。",
+    "positioning": "多地区网络连接服务，提供 BGP 智能调度与 IEPL／IPLC 优化线路，面向日常网络访问、影音娱乐、AI 工具及有独享线路需求的用户。",
+    "plans": [
+      {
+        "name": "灵动·拂风",
+        "monthly": 20,
+        "quarterly": 57,
+        "halfYearly": 108,
+        "yearly": 204,
+        "twoYear": 384,
+        "threeYear": 540,
+        "dataText": "100GB／月",
+        "dataGB": 100,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "灵动·驭浪",
+        "monthly": 50,
+        "quarterly": 142.5,
+        "halfYearly": 270,
+        "yearly": 510,
+        "twoYear": 960,
+        "threeYear": 1350,
+        "dataText": "300GB／月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "灵动·破晓",
+        "monthly": 100,
+        "quarterly": 285,
+        "halfYearly": 540,
+        "yearly": 1020,
+        "twoYear": 1920,
+        "threeYear": 2700,
+        "dataText": "700GB／月",
+        "dataGB": 700,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "灵动·凌霄",
+        "monthly": 180,
+        "quarterly": 513,
+        "halfYearly": 972,
+        "yearly": 1836,
+        "twoYear": 3456,
+        "threeYear": 4860,
+        "dataText": "1,500GB（1.5TB）／月",
+        "dataGB": 1536,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "灵动·穿云",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 99,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "70GB／30天重置",
+        "dataGB": 70,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "灵动·闲云（小流量包）",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 199,
+        "dataText": "150GB",
+        "dataGB": 150,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "灵动·惊云（标准流量包）",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 499,
+        "dataText": "400GB",
+        "dataGB": 400,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "灵动·飞云（精英流量包）",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 899,
+        "dataText": "800GB",
+        "dataGB": 800,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "灵动云·至尊私人定制",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "500GB／月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 20,
+    "minYearlyPrice": 99,
+    "maxMonthlyDataGB": 1536,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "lines": [
+      "BGP",
+      "IPLC",
+      "IEPL"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）",
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方灵动云客户端（用户提供的客服说明）"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "Nextin，识别码 LDY，需按客服指引获取App Store下载方式"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方灵动云客户端（用户提供的客服说明）"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方灵动云客户端（根据历史下载/客服资料）"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": true,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Midjourney"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "希望低价套餐直接自助获取第三方通用订阅链接的用户",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "第三方订阅从历史指定套餐领取变为客服2026-11-24所述¥200及以上特殊申请条件，作为时间变化并列记录；2026-11-17曾有攻击/线路优化公告，不可推断目前仍发生故障。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 2,
+    "id": "muguang-jiasu",
+    "slug": "muguang-jiasu",
+    "name": "暮光加速",
+    "englishName": "Twilight",
+    "couponCode": "mm88",
+    "affUrl": "https://varnexa.twilightaff.com/#/?code=1V9N5bZk",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/muguang-jiasu/",
+    "aliases": [
+      "暮光机场"
+    ],
+    "officialSite": "https://varnexa.twilightaff.com/#/?code=ftpJhH8V（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "提供月付专线出口与 BGP 多线路智能调度、轻量年付 IPLC 线路及一次性流量包的跨地区代理节点服务。",
+    "positioning": "覆盖常规影音与 AI 场景的多档流量服务，另有独享节点定制。",
+    "plans": [
+      {
+        "name": "年付轻量版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 109,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "70GB/月",
+        "dataGB": 70,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "基础版",
+        "monthly": 20,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "120GB/月",
+        "dataGB": 120,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "标准版",
+        "monthly": 40,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "240GB/月",
+        "dataGB": 240,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "旗舰版",
+        "monthly": 100,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "700GB/月",
+        "dataGB": 700,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "至尊版",
+        "monthly": 180,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1.5TB/月",
+        "dataGB": 1536,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "不限时轻量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 219,
+        "dataText": "150GB",
+        "dataGB": 150,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "不限时标准包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 529,
+        "dataText": "400GB",
+        "dataGB": 400,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "不限时大容量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 959,
+        "dataText": "800GB",
+        "dataGB": 800,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "独享私人定制节点",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 20,
+    "minYearlyPrice": 109,
+    "maxMonthlyDataGB": 1536,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "马来西亚",
+      "欧洲",
+      "其他地区"
+    ],
+    "lines": [
+      "BGP",
+      "IPLC"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "支持主流客户端及标准订阅接入"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "支持主流客户端及标准订阅接入"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+",
+        "HBO Max"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "长期订单、设备接入、订阅导出及账号共享以实际订单协议为准；未获得统一可执行条款。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 3,
+    "id": "breezenet",
+    "slug": "breezenet",
+    "name": "微风网络",
+    "englishName": "Breezenet",
+    "couponCode": "weifeng90",
+    "affUrl": "https://downloadshare.breezenetttt.sbs/#/?code=GnhAtVpF",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/breezenet/",
+    "aliases": [
+      "微风机场"
+    ],
+    "officialSite": "https://downloadshare.breezenetttt.sbs/#/?code=WL5PyLbC（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "微风网络（BreezeNet）提供「清风」年付、「乘风/破风/御风」月付及不限时流量包，主打不同月度流量档位和多地区节点。",
+    "positioning": "注重流量额度及多设备使用的专线型网络服务。",
+    "plans": [
+      {
+        "name": "清风 Breeze",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 137,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "100GB/月",
+        "dataGB": 100,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "乘风 Riding",
+        "monthly": 25,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "200GB/月",
+        "dataGB": 200,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "破风 Breaking",
+        "monthly": 55,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "御风 Mastery",
+        "monthly": 125,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1,200GB/月",
+        "dataGB": 200,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "信风·不限时",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 200,
+        "dataText": "270GB",
+        "dataGB": 270,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "长风·不限时",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 370,
+        "dataText": "570GB",
+        "dataGB": 570,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "公开资料未列独立定制套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "未找到可逐项验证的定制价目"
+      }
+    ],
+    "minMonthlyPrice": 25,
+    "minYearlyPrice": 137,
+    "maxMonthlyDataGB": 500,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "lines": [
+      "IPLC"
+    ],
+    "protocols": [
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可使用支持 VLESS 的安卓订阅客户端。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可使用支持相应订阅格式的 Shadowrocket 等客户端。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可使用品牌订阅支持的 Clash Verge Rev 或 v2rayN（是否可用依格式）。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可使用兼容 VLESS 配置的第三方客户端，建议从开发者官方来源安装。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "2026-10-15第三方调查记载不给 Clash 订阅，2026-11历史资料出现“可导入 VLESS”，本次不作肯定结论；部分来源旧版乘风标¥27，11月记录为¥25。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 4,
+    "id": "feimaoyun",
+    "slug": "feimaoyun",
+    "name": "飞猫云",
+    "englishName": "FlyCat",
+    "couponCode": "flycat888",
+    "affUrl": "https://flycat1.flycatvipaff.cc/#/?code=Gja6RpJ8",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/feimaoyun/",
+    "aliases": [
+      "飞猫机场"
+    ],
+    "officialSite": "https://fmy1.top/（该站自称品牌官方网站，其与所给推荐入口的运营关系未独立验证）；其与 AFF 后台运营主体的归属关系尚未独立确认。",
+    "summary": "提供 50GB/月学生年包、星耀至宇宙四档月付、一次性流量包及独享 IP 定制。",
+    "positioning": "常规订阅与多设备流媒体、商业专属线路并行的专线型网络服务。",
+    "plans": [
+      {
+        "name": "飞猫·学生版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 84,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "50GB/月",
+        "dataGB": 50,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "飞猫·星耀版",
+        "monthly": 25,
+        "quarterly": null,
+        "halfYearly": 127,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "飞猫·星环版",
+        "monthly": 45,
+        "quarterly": null,
+        "halfYearly": 229,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "飞猫·银河版",
+        "monthly": 85,
+        "quarterly": null,
+        "halfYearly": 433,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "600GB/月",
+        "dataGB": 600,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "飞猫·宇宙版",
+        "monthly": 150,
+        "quarterly": null,
+        "halfYearly": 750,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1TB/月",
+        "dataGB": 1024,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "飞猫·不限时套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 680,
+        "dataText": "1TB",
+        "dataGB": 1024,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "飞猫·定制套餐",
+        "monthly": 550,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 25,
+    "minYearlyPrice": 84,
+    "maxMonthlyDataGB": 1024,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "欧洲"
+    ],
+    "lines": [
+      "IPLC",
+      "IEPL"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）",
+      "VLESS",
+      "Trojan"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方 APK 通过平台知识库下载，不建议使用第三方 APK。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "按品牌知识库提供的统一客户端及识别步骤安装。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌近期公告主推官方 Windows 客户端，账号登录获取节点。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌近期公告主推官方 macOS 客户端。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "现有暂停公告明确涉及第三方订阅，不能把软件本身能安装当作套餐可用。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "现有暂停公告明确涉及第三方订阅，不能把软件本身能安装当作套餐可用。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "2026-07早期资料提到通用订阅，2026-10-01后台公告宣布暂停；以带日期的暂停通知为购买风险提示。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 5,
+    "id": "flyv",
+    "slug": "flyv",
+    "name": "飞V（FlyV）",
+    "englishName": "FlyV",
+    "couponCode": "fly20",
+    "affUrl": "https://varnexa.flyvaff.com/#/?code=PphqCqzD",
+    "priceDate": "2026-10-31",
+    "couponEvidence": "品牌公开说明",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/flyv/",
+    "aliases": [
+      "飞V",
+      "飞V机场"
+    ],
+    "officialSite": "https://www.flyv.site/（该站自称品牌官方网站，其与所给推荐入口的运营关系未独立验证）；其与 AFF 后台运营主体的归属关系尚未独立确认。",
+    "summary": "以香港、台湾、日本、新加坡、美国等地区节点与 IEPL 专线服务为主，提供常规订阅、年付小包、一次性流量包和独享公网 IP 方案。",
+    "positioning": "面向多终端使用、流媒体/AI 工具及对公网 IP 有独享需求的商业场景。",
+    "plans": [
+      {
+        "name": "年付标准轻量版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 99,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "65GB/月",
+        "dataGB": 65,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "入门方案",
+        "monthly": 25,
+        "quarterly": 71.25,
+        "halfYearly": 135,
+        "yearly": 255,
+        "twoYear": 480,
+        "threeYear": 675,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "进阶方案",
+        "monthly": 50,
+        "quarterly": 142.5,
+        "halfYearly": 270,
+        "yearly": 510,
+        "twoYear": 960,
+        "threeYear": 1350,
+        "dataText": "380GB/月",
+        "dataGB": 380,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "高端方案",
+        "monthly": 110,
+        "quarterly": 313.5,
+        "halfYearly": 594,
+        "yearly": 1122,
+        "twoYear": 2112,
+        "threeYear": 2970,
+        "dataText": "800GB/月",
+        "dataGB": 800,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "商业方案",
+        "monthly": 190,
+        "quarterly": 541.5,
+        "halfYearly": 1026,
+        "yearly": 1938,
+        "twoYear": 3648,
+        "threeYear": 5130,
+        "dataText": "1.8TB/月",
+        "dataGB": 1843,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "单次轻量版·小流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 189,
+        "dataText": "130GB",
+        "dataGB": 130,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "单次轻量版·标准流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 479,
+        "dataText": "380GB",
+        "dataGB": 380,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "单次轻量版·精英流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 799,
+        "dataText": "600GB",
+        "dataGB": 600,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "原生 IP·独享黄金专线",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 25,
+    "minYearlyPrice": 99,
+    "maxMonthlyDataGB": 1843,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "lines": [
+      "IEPL"
+    ],
+    "protocols": [
+      "其他协议"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌站提供 Android 使用教程，用户中心可查最新安装方式。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌站提供 iOS 使用教程；App Store 应通过品牌指引进入。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌站提供 Windows 客户端教程导航，登录用户中心获取软件。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌站提供 macOS 客户端教程导航，登录用户中心下载。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "长期订单、设备接入、订阅导出及账号共享以实际订单协议为准；未获得统一可执行条款。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 6,
+    "id": "wavenet",
+    "slug": "wavenet",
+    "name": "浪网",
+    "englishName": "WaveNet",
+    "couponCode": "lw888",
+    "affUrl": "https://varnexa.wavenetaff.com/#/?code=8lvPHncJ",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/wavenet/",
+    "aliases": [
+      "浪网机场"
+    ],
+    "officialSite": "https://varnexa.wavenetaff.com/#/?code=J4YRbSDO（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "提供年付标准档、四档月付、独享线路和三款不按月重置的总量包，覆盖常见亚太与欧美节点地区。",
+    "positioning": "BGP 调度加专线出口型多档订阅服务，兼顾常用地区连接与大流量需求。",
+    "plans": [
+      {
+        "name": "年付标准",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 119,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "80GB/月",
+        "dataGB": 80,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "入门",
+        "monthly": 30,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "进阶",
+        "monthly": 70,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "400GB/月",
+        "dataGB": 400,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "高端",
+        "monthly": 120,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "800GB/月",
+        "dataGB": 800,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "商业",
+        "monthly": 200,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "2TB/月",
+        "dataGB": 2048,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "小流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 239,
+        "dataText": "180GB",
+        "dataGB": 180,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "标准流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 569,
+        "dataText": "450GB",
+        "dataGB": 450,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "精英流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 1099,
+        "dataText": "900GB",
+        "dataGB": 900,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "定制线路包",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 30,
+    "minYearlyPrice": 119,
+    "maxMonthlyDataGB": 2048,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "马来西亚",
+      "欧洲",
+      "其他地区"
+    ],
+    "lines": [
+      "BGP",
+      "IPLC"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌推荐 v2rayNG，需使用官方渠道安装并确认订阅格式。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌资料推荐 Nextin，站点识别码需从该品牌自身后台获取。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "后台资料提到 Windows 客户端，未给出可验证的直链。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "后台资料提到 macOS 客户端，未给出可验证的直链。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "长期订单、设备接入、订阅导出及账号共享以实际订单协议为准；未获得统一可执行条款。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 7,
+    "id": "yinxingren",
+    "slug": "yinxingren",
+    "name": "隐形人",
+    "englishName": "InvisibleMan",
+    "couponCode": "yxr888",
+    "affUrl": "https://varnexa.invisibleaff.com/#/?code=TNqBqWEw",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/yinxingren/",
+    "aliases": [
+      "隐形人机场"
+    ],
+    "officialSite": "https://varnexa.invisibleaff.com/#/?code=n6RN1lfe（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "常规流量包、年付小包、独享节点和一次性买断流量包并存的网络连接服务。2026-11-06 有登录后台价目记录。",
+    "positioning": "服务于中低流量到高流量的多档位用户，也有个人独享连接的定制方案。",
+    "plans": [
+      {
+        "name": "星耀风暴",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 109,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "80GB/月；每30天重置",
+        "dataGB": 80,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "白银纪元",
+        "monthly": 24,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "144GB/月",
+        "dataGB": 144,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "黄金序列",
+        "monthly": 48,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "360GB/月",
+        "dataGB": 360,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "铂金至臻",
+        "monthly": 105,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "750GB/月",
+        "dataGB": 750,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "钻石穹顶",
+        "monthly": 185,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1600GB/月",
+        "dataGB": 1600,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "一次性小流量",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 229,
+        "dataText": "160GB",
+        "dataGB": 160,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "一次性标准流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 549,
+        "dataText": "420GB",
+        "dataGB": 420,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "一次性精英流量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 1199,
+        "dataText": "1000GB",
+        "dataGB": 1000,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "王者定制版",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 680,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": true,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 24,
+    "minYearlyPrice": 109,
+    "maxMonthlyDataGB": 1600,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "其他地区"
+    ],
+    "lines": [
+      "IEPL"
+    ],
+    "protocols": [
+      "其他协议"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "2026-11-06 后台列有 Android 下载入口；原 APK URL 未公开。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "2026-11-06 后台列有 iOS 下载入口，具体客户端以后台指引为准。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "2026-11-06 后台列有 Windows 下载入口；原程序直链未公开。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "2026-11-06 后台列有 macOS 下载入口；原程序直链未公开。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "2026-11-06用户后台记录显示一次性流量包的设备限制：套餐卡片写不限，详情出现1/2/3台，实际购买限制尚不能确定。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 8,
+    "id": "laddercloud",
+    "slug": "laddercloud",
+    "name": "梯子云",
+    "englishName": "LadderCloud",
+    "couponCode": "tzy888",
+    "affUrl": "https://varnexa.ladderaff.com/#/?code=kCHBqwtn",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/laddercloud/",
+    "aliases": [
+      "梯子云机场"
+    ],
+    "officialSite": "https://varnexa.ladderaff.com/#/?code=YU2JGrKq（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "提供初阶、中阶、高阶和商业顶阶订阅，以及 60GB/月的年付保活、三种一次性流量包和定制专线。",
+    "positioning": "分级区分基础中转、BGP 中转、IEPL 专线和企业级网络的机场服务。",
+    "plans": [
+      {
+        "name": "天梯随行·年度保活",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 89,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "60GB/月",
+        "dataGB": 60,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "初阶网络·基础视界",
+        "monthly": 25,
+        "quarterly": 71.25,
+        "halfYearly": 135,
+        "yearly": 255,
+        "twoYear": 480,
+        "threeYear": 675,
+        "dataText": "125GB/月",
+        "dataGB": 125,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "中阶加速·极清多线",
+        "monthly": 60,
+        "quarterly": 171,
+        "halfYearly": 324,
+        "yearly": 612,
+        "twoYear": 1152,
+        "threeYear": 1620,
+        "dataText": "350GB/月",
+        "dataGB": 350,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "高阶专线·全球智联",
+        "monthly": 110,
+        "quarterly": 313.5,
+        "halfYearly": 594,
+        "yearly": 1122,
+        "twoYear": 2112,
+        "threeYear": 2970,
+        "dataText": "750GB/月",
+        "dataGB": 750,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "顶阶商业·全球骨干",
+        "monthly": 190,
+        "quarterly": 541.5,
+        "halfYearly": 1026,
+        "yearly": 1938,
+        "twoYear": 3648,
+        "threeYear": 5130,
+        "dataText": "1600GB/月",
+        "dataGB": 1600,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "永不限时轻量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 169,
+        "dataText": "120GB",
+        "dataGB": 120,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "永不限时标准包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 449,
+        "dataText": "350GB",
+        "dataGB": 350,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "永不限时精英包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 849,
+        "dataText": "700GB",
+        "dataGB": 700,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "独享定制专线",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "由客服确认月度额度",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 25,
+    "minYearlyPrice": 89,
+    "maxMonthlyDataGB": 1600,
+    "regions": [
+      "中国香港",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "lines": [
+      "普通中转",
+      "BGP",
+      "IEPL"
+    ],
+    "protocols": [
+      "其他协议"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "需从梯子云用户中心确认指定 Android 软件和下载位置。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "需从梯子云用户中心确认 iOS App 与识别配置，不能直接套用其他品牌识别码。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "支持主流客户端及标准订阅接入"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "支持主流客户端及标准订阅接入"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "长期订单、设备接入、订阅导出及账号共享以实际订单协议为准；未获得统一可执行条款。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 9,
+    "id": "wuyou",
+    "slug": "wuyou",
+    "name": "无忧链接",
+    "englishName": "WorryFree",
+    "couponCode": "79元mini",
+    "affUrl": "https://wep01.worryfreeaff.com/#/?code=wRKHiDZB",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/wuyou/",
+    "aliases": [
+      "无忧链接",
+      "无忧机场"
+    ],
+    "officialSite": "https://wep01.worryfreeaff.com/#/?code=w8pUrMaM（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "面向个人与家庭用户的多档流量代理服务，包含 MINI 年付、舒心/省心等常规月付与一次性流量包。",
+    "positioning": "低门槛年付小包与常规月度流量并行的多设备连接服务。",
+    "plans": [
+      {
+        "name": "MINI 链接",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 79,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "40GB/月",
+        "dataGB": 40,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "舒心链接",
+        "monthly": 19,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "100GB/月",
+        "dataGB": 100,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "省心链接",
+        "monthly": 33,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "200GB/月",
+        "dataGB": 200,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "真无忧链接（专线套餐）",
+        "monthly": 40,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "100GB/月",
+        "dataGB": 100,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "随心链接",
+        "monthly": 77,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "忘忧链接",
+        "monthly": 117,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1TB/月",
+        "dataGB": 1024,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "不限时小包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 98,
+        "dataText": "100GB",
+        "dataGB": 100,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "不限时大包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 288,
+        "dataText": "300GB",
+        "dataGB": 300,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "无忧专业级定制套餐",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "500GB/月起",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 19,
+    "minYearlyPrice": 79,
+    "maxMonthlyDataGB": 1024,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "lines": [
+      "IPLC",
+      "IEPL"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）",
+      "VLESS",
+      "VMess",
+      "Trojan"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开教程推荐 Clash Meta for Android 等兼容客户端。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开教程推荐 Shadowrocket；需确认 App Store 所在地区可下载安装。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开教程推荐 Clash Verge Rev／v2rayN，需使用兼容版本。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可选支持提供协议的订阅客户端，具体软件应从原开发者渠道获取。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Copilot"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "部分宣传站点使用“无忧链接”并提供另一套价目，尚无法证明与本 AFF 后台相同；另有72小时退款申请的第三方描述，未找到完整正式退款条款。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 10,
+    "id": "firefly",
+    "slug": "firefly",
+    "name": "飞为（Firefly）",
+    "englishName": "Firefly",
+    "couponCode": "firefly",
+    "affUrl": "https://fly.fireflyxx.cfd/#/?code=WWdYMdoa",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/firefly/",
+    "aliases": [
+      "Firefly 机场"
+    ],
+    "officialSite": "https://fly.fireflyxx.cfd/#/?code=okty0PaM（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "提供 IPLC／IEPL 专线宣传的轻量年付、四档月度套餐及一次性流量包的代理服务。",
+    "positioning": "强调全节点 1× 计量及多终端使用的中低价位专线产品。",
+    "plans": [
+      {
+        "name": "Firefly 年付版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 96,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "60GB/月",
+        "dataGB": 60,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "Lite",
+        "monthly": 25,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "Plus",
+        "monthly": 45,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "Blaze",
+        "monthly": 85,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "600GB/月",
+        "dataGB": 600,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "Nova",
+        "monthly": 150,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1TB/月",
+        "dataGB": 1024,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "不限时",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 100,
+        "dataText": "100GB",
+        "dataGB": 100,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "公开资料未列独立定制套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "未找到可逐项验证的定制价目"
+      }
+    ],
+    "minMonthlyPrice": 25,
+    "minYearlyPrice": 96,
+    "maxMonthlyDataGB": 1024,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "马来西亚"
+    ],
+    "lines": [
+      "IPLC",
+      "IEPL"
+    ],
+    "protocols": [
+      "其他协议"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "有独立宣传资料称设备和协议不受限，但缺少登录后的统一第三方订阅、退款和设备政策证明。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 11,
+    "id": "quanqiuyun",
+    "slug": "quanqiuyun",
+    "name": "全球云",
+    "englishName": "GlobalCloud",
+    "couponCode": "qq88",
+    "affUrl": "https://n3oplhjnm.quanqiugttt1.club/#/?code=RZW9Z7OZ",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/quanqiuyun/",
+    "aliases": [
+      "全球云机场"
+    ],
+    "officialSite": "https://n3oplhjnm.quanqiugttt1.club/#/?code=RZW9Z7OZ（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "提供 BGP 智能调度与专线出口宣传的订阅方案、¥99 年付轻量版和三款一次性流量包。",
+    "positioning": "面向日常网络访问、AI 工具和流媒体的分档流量订阅及定制独享线路。",
+    "plans": [
+      {
+        "name": "轻量版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 99,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "59GB/月",
+        "dataGB": 59,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "BGP 智能优化·入门方案",
+        "monthly": 20,
+        "quarterly": 54,
+        "halfYearly": 102,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "120GB/月",
+        "dataGB": 120,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "BGP 智能优化·进阶方案",
+        "monthly": 40,
+        "quarterly": 108,
+        "halfYearly": 204,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "BGP 智能优化·高端方案",
+        "monthly": 100,
+        "quarterly": 270,
+        "halfYearly": 510,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "700GB/月",
+        "dataGB": 700,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "BGP 智能优化·商业方案",
+        "monthly": 180,
+        "quarterly": 486,
+        "halfYearly": 918,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1.5TB/月",
+        "dataGB": 1536,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "BGP 智能优化·不限时轻量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 100,
+        "dataText": "100GB",
+        "dataGB": 100,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "BGP 智能优化·不限时标准包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 360,
+        "dataText": "400GB",
+        "dataGB": 400,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "BGP 智能优化·不限时大容量包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 700,
+        "dataText": "800GB",
+        "dataGB": 800,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "独享私人专线节点",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 20,
+    "minYearlyPrice": 99,
+    "maxMonthlyDataGB": 1536,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "欧洲"
+    ],
+    "lines": [
+      "BGP",
+      "IEPL"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）",
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可用兼容 VLESS 的客户端（以用户中心给出的订阅方式为准）。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "部分第三方教程推荐 Shadowrocket，但实际开放状态以账号后台为准。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "部分后台教程支持 Clash Verge Rev／v2rayN，需先拿到实际订阅。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可用兼容 VLESS 的第三方客户端（前提：账号确实提供订阅）。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "2026-11后台 VLESS 节点快照与部分营销文案的 Shadowsocks 协议不同；各类节点地区名单与旧测速样本有差异。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 12,
+    "id": "lightspeed",
+    "slug": "lightspeed",
+    "name": "光速云",
+    "englishName": "LightSpeed",
+    "couponCode": "AMM",
+    "affUrl": "https://mdlky.gsyaff.com/#/?code=nnRRD56A",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/lightspeed/",
+    "aliases": [
+      "LightSpeed",
+      "光速云机场"
+    ],
+    "officialSite": "请通过推广链接进入官网核对",
+    "summary": "光速云（LightSpeed）在公开原稿中列出 IEPL/IPLC 线路、多出口地区、月付 ¥23 起及 ¥99/年轻量版，同时提供不限时流量包与美国原生家宽 IP 定制套餐。",
+    "positioning": "多地区出口覆盖、按期与不限时并存的专线型机场资料档，适合需要多地区节点或固定家宽 IP 定制的用户核实选购。",
+    "plans": [
+      {
+        "name": "极速版",
+        "monthly": 23,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "dataText": "138 GB/月",
+        "dataGB": 138,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "流光版",
+        "monthly": 34,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "dataText": "220 GB/月",
+        "dataGB": 220,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "量子版",
+        "monthly": 68,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "dataText": "450 GB/月",
+        "dataGB": 450,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "无界版",
+        "monthly": 130,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "dataText": "900 GB/月",
+        "dataGB": 900,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "轻量版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 99,
+        "dataText": "59 GB/月",
+        "dataGB": 59,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "不限时套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 680,
+        "dataText": "1000 GB（不限时）",
+        "dataGB": 1000,
+        "isOneTime": true,
+        "isCustom": false
+      },
+      {
+        "name": "定制套餐（美国原生家宽IP）",
+        "monthly": 680,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "dataText": "500 GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": true
+      }
+    ],
+    "minMonthlyPrice": 23,
+    "minYearlyPrice": 99,
+    "maxMonthlyDataGB": 900,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "马来西亚",
+      "英国",
+      "法国",
+      "德国",
+      "土耳其",
+      "泰国",
+      "巴西"
+    ],
+    "lines": [
+      "IEPL",
+      "IPLC"
+    ],
+    "protocols": [
+      "VLESS（第三方记录，待用户中心确认）"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方客户端，官网渠道下载"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方客户端，需按官网指引获取"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方客户端，官网渠道下载"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方客户端，官网渠道下载"
+      },
+      "linux": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "原稿标注支持 Linux 官方客户端"
+      },
+      "router": {
+        "status": "unsupported",
+        "label": "明确不支持",
+        "note": "官方不推荐导出订阅至第三方客户端或路由器"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方原稿明确不推荐导入 Clash / 小火箭等第三方客户端"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方原稿明确不推荐导入第三方客户端"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "原稿宣传不限设备（多端同时在线，待订单条款验证）",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Gemini"
+      ],
+      "evidenceNote": "原稿宣传支持，但明确说明可用性不作持续保证，以实测为准。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+",
+        "Hulu",
+        "HBO",
+        "TikTok"
+      ],
+      "evidenceNote": "原稿标注使用原生 IP 并列出以上平台，未提供独立测速/解锁实证。"
+    },
+    "gamingEvidence": "缺少游戏延迟、丢包与抖动的独立实测数据；仅提供 IEPL/IPLC 线路标签，不保证游戏加速效果。",
+    "refundPolicy": "原稿明确称特殊商品不支持退款、无免费试用；购买前需核对当期结算页条款。",
+    "suitableFor": [
+      "多地区节点需求",
+      "高性价比大流量月付",
+      "轻度年付备用（¥99/年）",
+      "原生家宽IP定制需求"
+    ],
+    "notSuitableFor": [
+      "强依赖 Clash / Shadowrocket / 路由器订阅的用户",
+      "需要免费试用或无条件退款保证的用户"
+    ],
+    "conflictsAndNotes": [
+      "极速版流量在原稿（138GB）与2026-10部分第三方记录（148GB）存在版本差异。",
+      "优惠码 AMM 在不同公开来源存在 8 折与 9 折两种说法，须在结算页核实实际减免。"
+    ],
+    "verifiedDate": "2026-11-13"
+  },
+  {
+    "order": 13,
+    "id": "v2yun",
+    "slug": "v2yun",
+    "name": "唯兔云（V2云）",
+    "englishName": "V2Yun",
+    "couponCode": "rabbit",
+    "affUrl": "https://fast.v2yunvipaff.com/#/?code=Q03xl6H9",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/v2yun/",
+    "aliases": [
+      "V2云",
+      "唯兔机场"
+    ],
+    "officialSite": "https://fast.v2yunvipaff.com/#/?code=NwYl5X0J（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "提供低价年包、节假日小月包、普通/月度大流量套餐及一次性总量流量包的网络连接服务。",
+    "positioning": "覆盖轻量访问、高清视频、AI 工具与大流量使用的多档代理节点产品。",
+    "plans": [
+      {
+        "name": "年付超值套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 120,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "75GB/月",
+        "dataGB": 75,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "年付优惠套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 79.9,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "45GB/月",
+        "dataGB": 45,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "节假日限时月付套餐",
+        "monthly": 14.9,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "100GB/月",
+        "dataGB": 100,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "精通版（部分旧资料称普通版）",
+        "monthly": 19.9,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "流畅版",
+        "monthly": 29.9,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "200GB/月",
+        "dataGB": 200,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "专业版",
+        "monthly": 59.9,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "500GB/月",
+        "dataGB": 500,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "超尊版",
+        "monthly": 119.9,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1.4TB/月",
+        "dataGB": 1434,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "永久不限时·100GB",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 100,
+        "dataText": "100GB",
+        "dataGB": 100,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "永久不限时·200GB",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 160,
+        "dataText": "200GB",
+        "dataGB": 200,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "永久不限时·500GB",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 340,
+        "dataText": "500GB",
+        "dataGB": 500,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "公开资料未列独立定制套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "未找到可逐项验证的定制价目"
+      }
+    ],
+    "minMonthlyPrice": 14.9,
+    "minYearlyPrice": 79.9,
+    "maxMonthlyDataGB": 1434,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "马来西亚",
+      "欧洲"
+    ],
+    "lines": [
+      "IPLC",
+      "IEPL"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）",
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "当前优先按后台统一安卓客户端指引登录。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "按后台 iOS 统一客户端教程登录；旧 Shadowrocket 订阅可能停用。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "当前优先按后台官方 Windows 客户端指引登录。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "当前优先按后台官方 macOS 客户端指引登录。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "现有暂停公告明确涉及第三方订阅，不能把软件本身能安装当作套餐可用。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "现有暂停公告明确涉及第三方订阅，不能把软件本身能安装当作套餐可用。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "部分教程还称支持通用 Clash 订阅，与2026-10的暂停公告冲突；临时月付优惠套餐可能并非长期在售。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 14,
+    "id": "u1s1",
+    "slug": "u1s1",
+    "name": "U1S1（有一说一）",
+    "englishName": "U1S1",
+    "couponCode": "U1S1",
+    "affUrl": "https://pkdj7.vipaff.cc/#/?code=Dw6wziZa",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/u1s1/",
+    "aliases": [
+      "U1S1 机场"
+    ],
+    "officialSite": "https://pkdj7.vipaff.cc/#/?code=Dw6wziZa（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "有一说一（U1S1）提供四档 BGP 优化加专线出口的月付套餐、学生轻量年包及定制线路。",
+    "positioning": "面向网页、AI、海外社交、高清流媒体和多设备使用的分档机场服务。",
+    "plans": [
+      {
+        "name": "u1s1·就是好用包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 96,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "60GB/月",
+        "dataGB": 60,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "u1s1·普通人真够了包",
+        "monthly": 20,
+        "quarterly": 54,
+        "halfYearly": 102,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "120GB/月",
+        "dataGB": 120,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "u1s1·你以为用不到包",
+        "monthly": 40,
+        "quarterly": 108,
+        "halfYearly": 204,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "u1s1·瘾大就拉满包",
+        "monthly": 100,
+        "quarterly": 270,
+        "halfYearly": 510,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "700GB/月",
+        "dataGB": 700,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "u1s1·我全都要包",
+        "monthly": 180,
+        "quarterly": 486,
+        "halfYearly": 918,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1.5TB/月",
+        "dataGB": 1536,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "公开资料未列独立一次性包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "—"
+      },
+      {
+        "name": "u1s1·定制包",
+        "monthly": 600,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "由客服按需求配置",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "定制/独享服务；实际节点、IP 和设备条款应以专属合同及客服配置为准"
+      }
+    ],
+    "minMonthlyPrice": 20,
+    "minYearlyPrice": 96,
+    "maxMonthlyDataGB": 1536,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "马来西亚",
+      "其他地区"
+    ],
+    "lines": [
+      "BGP",
+      "IEPL"
+    ],
+    "protocols": [
+      "Shadowsocks（SS）",
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开教程推荐 Clash Meta for Android。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开教程推荐 Shadowrocket。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "使用 Clash Verge Rev／v2rayN 等支持 VLESS 的客户端。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "使用兼容 VLESS 的桌面客户端并导入对应订阅。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "网络存在名称相近但报价不同的 U1S1 同名网站，不能擅自并入同一品牌套餐；2026-11后台记录套餐描述为SS而节点样本为VLESS。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 15,
+    "id": "sogoyun",
+    "slug": "sogoyun",
+    "name": "Sogo云",
+    "englishName": "SogoYun",
+    "couponCode": "SOGO10000",
+    "affUrl": "https://jbvfh.sogotztz2.sbs/#/?code=RMM9ZL0E",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/sogoyun/",
+    "aliases": [
+      "sogo云"
+    ],
+    "officialSite": "https://sogoyun.bid/（该站自称品牌官方网站，其与所给推荐入口的运营关系未独立验证）；其与 AFF 后台运营主体的归属关系尚未独立确认。",
+    "summary": "Sogo云提供年付小流量、月付及一次性流量套餐。2026-11-21 公开资料描述其采用 VLESS 协议并宣传 IPLC/IEPL 专线，面向日常跨地区访问、影音和 AI 场景。",
+    "positioning": "提供 IEPL/IPLC 专线宣传的多地区、高流量与长期按量套餐。",
+    "plans": [
+      {
+        "name": "小包年付版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 98,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "60GB/月",
+        "dataGB": 60,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "基础版",
+        "monthly": 25,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "优选版",
+        "monthly": 45,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "350GB/月",
+        "dataGB": 350,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "强化版",
+        "monthly": 80,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "550GB/月",
+        "dataGB": 550,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "顶配版",
+        "monthly": 150,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1.1TB/月",
+        "dataGB": 1126,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "不限时 120G",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 120,
+        "dataText": "120GB",
+        "dataGB": 120,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "不限时 250G",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 250,
+        "dataText": "250GB",
+        "dataGB": 250,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "不限时 500G",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 450,
+        "dataText": "500GB",
+        "dataGB": 500,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "不限时 1T",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 850,
+        "dataText": "1TB",
+        "dataGB": 1024,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "公开资料未列独立定制套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "未找到可逐项验证的定制价目"
+      }
+    ],
+    "minMonthlyPrice": 25,
+    "minYearlyPrice": 98,
+    "maxMonthlyDataGB": 1126,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "马来西亚"
+    ],
+    "lines": [
+      "普通中转",
+      "IPLC",
+      "IEPL"
+    ],
+    "protocols": [
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌展示页列官方 Android 客户端。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌展示页列官方 iOS 客户端。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌展示页列官方 Windows 客户端。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "品牌展示页列官方 macOS 客户端。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "没有与该套餐绑定的官方导入授权及兼容性测试证据。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+",
+        "HBO Max"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "不同公开来源中基础版流量出现120/150GB、优选版250/350GB、轻量年付30/60GB等差异；本表采用2026-11-21价目记录，不得当成独立登录验证的今日实时套餐。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 16,
+    "id": "lingmao",
+    "slug": "lingmao",
+    "name": "灵猫",
+    "englishName": "CivetNet",
+    "couponCode": "lingmao",
+    "affUrl": "https://vip02.civetaff.com/#/?code=DpcJTfcr",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/lingmao/",
+    "aliases": [
+      "灵猫",
+      "灵猫机场"
+    ],
+    "officialSite": "https://vip02.civetaff.com/#/?code=32HYcbmU（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "主打 IPLC 专线与 150GB/300GB 常规套餐，另有年度轻量包、不限时流量以及定制档。",
+    "positioning": "以官方统一客户端为近期主要接入方式的多设备连接服务。",
+    "plans": [
+      {
+        "name": "年付小包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 85,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "45GB/月",
+        "dataGB": 45,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "年付 Small",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 195,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "年付 Big",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 295,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "季付 Big",
+        "monthly": null,
+        "quarterly": 125,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "月付 Small",
+        "monthly": 25,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "月付 Big",
+        "monthly": 45,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "灵猫·季付 Small",
+        "monthly": null,
+        "quarterly": 65,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "不限时 Small",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 100,
+        "dataText": "100GB",
+        "dataGB": 100,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "不限时 Big",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 350,
+        "dataText": "500GB",
+        "dataGB": 500,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "不限时/用完为止（来源套餐描述）"
+      },
+      {
+        "name": "公开资料未列独立定制套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "未找到可逐项验证的定制价目"
+      }
+    ],
+    "minMonthlyPrice": 25,
+    "minYearlyPrice": 85,
+    "maxMonthlyDataGB": 300,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "lines": [
+      "IPLC"
+    ],
+    "protocols": [
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "官方 Android 客户端；来源2026-11-12后台核对"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "Nextin，识别码 lmwl；需按官方渠道获取；来源2026-11-12后台核对"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "灵猫专属客户端，Windows 10+；来源2026-11-12后台核对"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "灵猫专属客户端，macOS 10.15+；来源2026-11-12后台核对"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "现有暂停公告明确涉及第三方订阅，不能把软件本身能安装当作套餐可用。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "现有暂停公告明确涉及第三方订阅，不能把软件本身能安装当作套餐可用。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": false,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+",
+        "HBO Max",
+        "TikTok"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "官方套餐卡有“不限制客户端”旧文案，但2026-11-05公告暂停第三方订阅，两者不可等同；价格表补入2026-11-12后台记录的¥65/季付 Small。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 17,
+    "id": "flashleap",
+    "slug": "flashleap",
+    "name": "闪跃",
+    "englishName": "FlashLeap",
+    "couponCode": "shanyue",
+    "affUrl": "https://vip02.flashleapaff.com/#/?code=Mn2H0udG",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/flashleap/",
+    "aliases": [
+      "闪跃机场"
+    ],
+    "officialSite": "https://www.flashleapcn.com/（该站自称品牌官方网站，其与所给推荐入口的运营关系未独立验证）；其与 AFF 后台运营主体的归属关系尚未独立确认。",
+    "summary": "闪跃使用 IPLC 专线作为公开产品卖点，提供轻量年付及闪动、飞跃、瞬移、跃迁四档月付。",
+    "positioning": "日常网络访问、高清视频及 AI 使用的分档专线订阅。",
+    "plans": [
+      {
+        "name": "闪跃年付版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 96,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "60GB/月",
+        "dataGB": 60,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "闪跃高档年付版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 180,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "120GB/月",
+        "dataGB": 120,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "闪动 Flicker",
+        "monthly": 24,
+        "quarterly": 64,
+        "halfYearly": 122,
+        "yearly": 230,
+        "twoYear": 403,
+        "threeYear": 518,
+        "dataText": "150GB/月",
+        "dataGB": 150,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "飞跃 Leap",
+        "monthly": 44,
+        "quarterly": 118,
+        "halfYearly": 224,
+        "yearly": 422,
+        "twoYear": 739,
+        "threeYear": 950,
+        "dataText": "300GB/月",
+        "dataGB": 300,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "瞬移 Teleport",
+        "monthly": 84,
+        "quarterly": 226,
+        "halfYearly": 428,
+        "yearly": 806,
+        "twoYear": 1400,
+        "threeYear": 1814,
+        "dataText": "600GB/月",
+        "dataGB": 600,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "跃迁 Warp",
+        "monthly": 134,
+        "quarterly": 369,
+        "halfYearly": 698,
+        "yearly": 1315,
+        "twoYear": 2301,
+        "threeYear": 2959,
+        "dataText": "1TB/月",
+        "dataGB": 1024,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "闪跃不限时 100GB",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 150,
+        "dataText": "100GB",
+        "dataGB": 100,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "长期有效（商家标题）"
+      },
+      {
+        "name": "闪跃不限时 200GB",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": 288,
+        "dataText": "200GB",
+        "dataGB": 200,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "长期有效（商家标题）"
+      },
+      {
+        "name": "公开资料未列独立定制套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": true,
+        "isCustom": true,
+        "note": "未找到可逐项验证的定制价目"
+      }
+    ],
+    "minMonthlyPrice": 24,
+    "minYearlyPrice": 96,
+    "maxMonthlyDataGB": 1024,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "马来西亚"
+    ],
+    "lines": [
+      "IPLC"
+    ],
+    "protocols": [
+      "其他协议"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "Android 5.0+，品牌 APK 安装（资料2026-09-27）"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "iOS 12.0+，Nextin 识别码 sywl（资料2026-09-27）"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "Windows 10+，品牌客户端下载说明（资料2026-09-27）"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "macOS 10.15+，品牌客户端教程（资料2026-09-27）"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": true,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "希望低价套餐直接自助获取第三方通用订阅链接的用户",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "2026-11-17 的简表仅列五款周期套餐；2026-10-20 据官网重新读取的详细档案列六款周期（增加¥180/年款）和两款不限时包，本稿完整列出八款并注明时间。"
+    ],
+    "verifiedDate": "2026-11-24"
+  },
+  {
+    "order": 18,
+    "id": "kuajie",
+    "slug": "kuajie",
+    "name": "跨界",
+    "englishName": "Kuajie",
+    "couponCode": "kuajie",
+    "affUrl": "https://vip02.kuajieaff.com/#/?code=cyls6TVF",
+    "priceDate": "2026-10-20",
+    "couponEvidence": "第三方公开记录",
+    "priceSourceUrl": "https://jichangyouxuan.blog/airports/kuajie/",
+    "aliases": [
+      "跨界机场"
+    ],
+    "officialSite": "https://vip02.kuajieaff.com/#/?code=Ip6UEBsp（登记为品牌访问/注册入口；为动态跳转或登录页面，未能独立核对运营主体及实时报价）",
+    "summary": "提供从轻云 120GB 到无界 1.8TB 的 IPLC 线路套餐、两档年付和一次性总量包。",
+    "positioning": "覆盖日常连接、家庭共享及高流量使用的分档专线产品。",
+    "plans": [
+      {
+        "name": "跨界年付版",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": 96,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "60GB/月",
+        "dataGB": 60,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "轻云 Lite",
+        "monthly": 20,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "120GB/月",
+        "dataGB": 120,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "跃云 Leap",
+        "monthly": 40,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "330GB/月",
+        "dataGB": 330,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "凌云 Soar",
+        "monthly": 90,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "830GB/月",
+        "dataGB": 830,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "无界 Infinity",
+        "monthly": 130,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "twoYear": null,
+        "threeYear": null,
+        "dataText": "1.8TB/月",
+        "dataGB": 1843,
+        "isOneTime": false,
+        "isCustom": false
+      },
+      {
+        "name": "公开资料未列独立一次性包",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": true,
+        "isCustom": false,
+        "note": "—"
+      },
+      {
+        "name": "公开资料未列独立定制套餐",
+        "monthly": null,
+        "quarterly": null,
+        "halfYearly": null,
+        "yearly": null,
+        "oneTimePrice": null,
+        "dataText": "—",
+        "dataGB": null,
+        "isOneTime": false,
+        "isCustom": true,
+        "note": "未找到可逐项验证的定制价目"
+      }
+    ],
+    "minMonthlyPrice": 20,
+    "minYearlyPrice": 96,
+    "maxMonthlyDataGB": 1843,
+    "regions": [
+      "中国香港",
+      "中国台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "lines": [
+      "IPLC"
+    ],
+    "protocols": [
+      "VLESS"
+    ],
+    "devices": {
+      "android": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可使用兼容 VLESS 的 Clash Meta for Android 或 v2rayNG。"
+      },
+      "ios": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开资料推荐 Shadowrocket，需非中国大陆区 App Store 账号购买或下载。"
+      },
+      "windows": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "公开教程推荐 Clash Verge Rev／v2rayN，取得相应格式订阅后使用。"
+      },
+      "macos": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "可用兼容 VLESS 配置的 Clash 系或其他客户端，需实际订阅格式支持。"
+      },
+      "linux": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "router": {
+        "status": "unconfirmed",
+        "label": "资料未确认",
+        "note": "公开资料未提供该平台的可执行安装/授权政策，不能保证可用。"
+      },
+      "clash": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      },
+      "shadowrocket": {
+        "status": "supported",
+        "label": "明确支持",
+        "note": "仅在已取得对应格式订阅及支持内核时可能接入；没有针对该软件逐个测试。"
+      }
+    },
+    "subscriptionPolicy": {
+      "thirdPartySupported": true,
+      "needTicket": true,
+      "summary": "支持第三方开源与主流客户端订阅导入（Clash Verge Rev / FlClash / v2rayN / Shadowrocket）"
+    },
+    "concurrentDevices": "品牌/公开套餐资料宣称不限设备；未取得对并发连接数、家庭IP和账号共享的逐项保证。",
+    "isUnlimitedClaim": true,
+    "aiSupport": {
+      "supportedList": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做独立实时解锁测试。"
+    },
+    "streamingSupport": {
+      "supportedList": [
+        "YouTube",
+        "Netflix",
+        "Disney+"
+      ],
+      "evidenceNote": "基于品牌宣传或第三方公开记录，未做 4K 吞吐量独立测试。"
+    },
+    "gamingEvidence": "公开档案暂无独立游戏延迟、丢包率与抖动实测样本；不作游戏加速效果承诺。",
+    "refundPolicy": "目前未收集到完整适用的公开承诺。",
+    "suitableFor": [
+      "预算敏感型／学生党日常轻量访问",
+      "视频流媒体及中高流量消耗用户",
+      "低频备用／不限时按量使用需求",
+      "AI 工具与海外科研资料查询（需实测具体节点）",
+      "多终端协同（品牌资料宣称不限设备，仍需核对绑定规则）"
+    ],
+    "notSuitableFor": [
+      "强依赖路由器固件直接导入订阅的用户（公开资料未确认支持）",
+      "希望低价套餐直接自助获取第三方通用订阅链接的用户",
+      "对游戏低延迟/零丢包有硬性保证需求（当前无独立游戏实测数据）"
+    ],
+    "conflictsAndNotes": [
+      "长期订单、设备接入、订阅导出及账号共享以实际订单协议为准；未获得统一可执行条款。"
+    ],
+    "verifiedDate": "2026-11-24"
+  }
+]

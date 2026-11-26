@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SakielCharacter from '../components/art/SakielCharacter.astro';
+import CampusSceneArt from '../components/art/CampusSceneArt.astro';
+import { ALL_ARTICLES, type AcademyArticle } from '../data/articles';
+import { CAMPUS_CHAPTERS } from '../data/chapters';
+
+export function getStaticPaths() {
+  return ALL_ARTICLES.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: AcademyArticle;
+}
+
+const { article } = Astro.props;
+const chapter = CAMPUS_CHAPTERS.find((c) => c.id === article.chapterId) || CAMPUS_CHAPTERS[0];
+const templateLabels: Record<string, string> = {
+  A: '学生选购专题',
+  B: '知识课堂笔记',
+  C: '设备客户端教程',
+  D: '故障答疑指南',
+};
+---
+
+<BaseLayout
+  title={article.seoTitle}
+  description={article.description}
+  breadcrumbs={[
+    { label: '首页', url: '/' },
+    { label: article.categoryName, url: `/${article.categorySlug}/` },
+    { label: article.title },
+  ]}
+  articleSchema={{
+    headline: article.title,
+    datePublished: article.updatedAt,
+    dateModified: article.updatedAt,
+  }}
+>
+  <article class="section-block">
+    <div class="container article-layout">
+      <div class="article-main">
+        <div class="article-header glass-panel" style="padding:1.5rem;margin-bottom:1.5rem;">
+          <div style="display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:0.65rem;">
+            <span class="badge badge-sakura">第 {chapter.id} 章 · {chapter.chineseTitle}</span>
+            <span class="badge badge-purple">{templateLabels[article.template]}</span>
+            <span class="badge badge-sky">阅读约 {article.readTime}</span>
+          </div>
+          <h1>{article.title}</h1>
+          <p style="font-size:0.95rem;margin-bottom:0.6rem;">{article.description}</p>
+          <div style="font-size:0.83rem;color:var(--text-muted);display:flex;flex-wrap:wrap;gap:1rem;">
+            <span>作者：机场学院编辑组</span>
+            <span>更新日期：{article.updatedAt}</span>
+            <span>关键词编号：{article.keywordIds.join('、')}</span>
+          </div>
+        </div>
+
+        <!-- Senpai Tip -->
+        <div class="senpai-dialogue" style="margin-bottom:1.5rem;">
+          <div class="senpai-dialogue-avatar">
+            <SakielCharacter state={chapter.sakielState} size={78} />
+          </div>
+          <div>
+            <strong style="color:var(--rose-deep);font-size:0.9rem;">SAKIEL · 樱羽学姐的课堂划重点</strong>
+            <p style="margin:0.25rem 0 0 0;font-size:0.94rem;">{article.senpaiTip}</p>
+          </div>
+        </div>
+
+        <!-- Article Sections -->
+        <div class="article-body">
+          {article.sections.map((sec, idx) => (
+            <section id={`sec-${idx + 1}`} class="academy-card" style="margin-bottom:1.25rem;">
+              <h2>{sec.heading}</h2>
+              {sec.paragraphs.map((p) => (
+                <p>{p}</p>
+              ))}
+              {sec.bullets && (
+                <ul>
+                  {sec.bullets.map((b) => (
+                    <li>{b}</li>
+                  ))}
+                </ul>
+              )}
+              {sec.subsections && sec.subsections.map((sub) => (
+                <div style="margin-top:0.85rem;">
+                  <h3 style="font-size:1.08rem;color:var(--rose-deep);margin-bottom:0.35rem;">{sub.heading}</h3>
+                  {sub.paragraphs.map((sp) => (
+                    <p>{sp}</p>
+                  ))}
+                </div>
+              ))}
+              {sec.callout && (
+                <div class={`badge badge-${sec.callout.tone}`} style="display:block;white-space:normal;border-radius:12px;padding:0.85rem 1rem;margin-top:0.75rem;">
+                  <strong style="display:block;margin-bottom:0.25rem;">{sec.callout.title}</strong>
+                  <span>{sec.callout.body}</span>
+                </div>
+              )}
+            </section>
+          ))}
+
+          {article.conclusion && (
+            <section class="academy-card" style="margin-bottom:1.25rem;background:linear-gradient(135deg,#FFFFFF 0%,#FDF4F8 100%);">
+              <h2>结尾总结</h2>
+              <p style="margin-bottom:0;">{article.conclusion}</p>
+            </section>
+          )}
+
+          {article.faqs && article.faqs.length > 0 && (
+            <section class="academy-card" style="margin-bottom:1.25rem;">
+              <h2>本课常见问题 FAQ</h2>
+              <div style="display:flex;flex-direction:column;gap:0.65rem;margin-top:0.75rem;">
+                {article.faqs.map((f, fIdx) => (
+                  <details open={fIdx === 0} style="border:1px solid var(--border-subtle);border-radius:12px;padding:0.75rem 1rem;background:#FFFDFB;">
+                    <summary style="font-weight:700;cursor:pointer;color:var(--text-primary);">{f.q}</summary>
+                    <p style="margin:0.55rem 0 0 0;font-size:0.92rem;">{f.a}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+        <!-- Source & Error Correction -->
+        <div class="notebook-card" style="margin-top:1.5rem;">
+          <h3 style="margin-top:0;">资料来源与纠错入口</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.6rem;">{article.sourceNote}</p>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+            <a href="/contact/" class="btn btn-sm btn-secondary">发现过时或错误？点此纠错</a>
+            <a href="/methodology/" class="btn btn-sm btn-soft">查看编辑与核验标准</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Floating Sidebar -->
+      <aside class="article-sidebar">
+        <div class="academy-card sidebar-sticky">
+          <CampusSceneArt chapter={chapter.id} title={chapter.chineseTitle} />
+          <h3 style="margin-top:1rem;font-size:1rem;">本课目录</h3>
+          <ul class="toc-list">
+            {article.sections.map((sec, idx) => (
+              <li><a href={`#sec-${idx + 1}`}>{sec.heading}</a></li>
+            ))}
+          </ul>
+          <hr style="border:none;border-top:1px dashed var(--border-sakura);margin:1rem 0;" />
+          <h3 style="font-size:1rem;">关联学习课程</h3>
+          <ul class="toc-list">
+            {article.relatedUrls.map((rel) => (
+              <li><a href={rel.url}>{rel.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-layout {
+    display: grid;
+    grid-template-columns: 1fr 310px;
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .sidebar-sticky {
+    position: sticky;
+    top: calc(var(--nav-height) + 1.25rem);
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.88rem;
+  }
+
+  .toc-list li {
+    margin-bottom: 0.45rem;
+  }
+
+  @media (max-width: 960px) {
+    .article-layout {
+      grid-template-columns: 1fr;
+    }
+    .sidebar-sticky {
+      position: static;
+    }
+  }
+</style>

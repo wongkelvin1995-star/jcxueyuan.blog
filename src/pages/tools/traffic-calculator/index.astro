@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TrafficCalculatorTool from '../../../components/tools/TrafficCalculatorTool';
+---
+
+<BaseLayout
+  title="套餐流量数学课堂 · Traffic Classroom｜机场学院"
+  description="自定义每天学习时长、公开课视频清晰度与节点倍率，精准估算每月所需流量与每GB实际成本。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '流量课堂', url: '/traffic/student/' }, { label: '流量计算器' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>套餐流量数学课堂 · Traffic Classroom</h1>
+      <p>拖动滑块即可模拟文献检索、AI 对话与海外公开课视频的真实月度扣费流量。</p>
+      <TrafficCalculatorTool client:load />
+    </div>
+  </section>
+</BaseLayout>

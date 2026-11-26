@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuizTool from '../../components/tools/QuizTool';
+---
+
+<BaseLayout
+  title="入学知识测试 · Academy Quiz｜机场学院"
+  description="6道机场学院核心自测题，检验你对月付试错、流量倍率、规则模式、订阅更新与苹果账号安全的掌握情况。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '知识测试' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>机场学院入学知识测试</h1>
+      <p>完成测试后，最高成绩会自动保存在本地“我的学院”中心。</p>
+      <QuizTool client:load />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import DictionaryTool from '../../../components/tools/DictionaryTool';
+---
+
+<BaseLayout
+  title="机场基础知识词典（50+术语）· Academy Dictionary｜机场学院"
+  description="收录机场、VPN、订阅链接、节点、IEPL/IPLC、TUN模式、规则模式、DNS、流量倍率等50个核心术语，支持中英文与同义词搜索。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '知识百科', url: '/knowledge/' }, { label: '知识词典' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>机场基础知识词典 · Academy Dictionary</h1>
+      <p>支持中文术语、英文全称/缩写与同义词实时搜索，帮助零基础同学快速扫清阅读障碍。</p>
+      <DictionaryTool client:load />
+    </div>
+  </section>
+</BaseLayout>

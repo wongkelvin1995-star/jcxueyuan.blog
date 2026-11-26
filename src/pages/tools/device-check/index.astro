@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import DeviceCheckTool from '../../../components/tools/DeviceCheckTool';
+---
+
+<BaseLayout
+  title="全平台设备兼容性查询 · Device Classroom｜机场学院"
+  description="按 Windows、macOS、Android、iOS、Clash 与 Shadowrocket 筛选18家已核验品牌的兼容状态与第三方订阅政策。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '设备教程', url: '/tutorials/desktop/' }, { label: '设备查询' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>全平台设备兼容性查询 · Device Classroom</h1>
+      <p>点击选择你使用的操作系统或客户端，核对 18 家品牌的兼容情况与官方订阅政策。</p>
+      <DeviceCheckTool client:load />
+    </div>
+  </section>
+</BaseLayout>

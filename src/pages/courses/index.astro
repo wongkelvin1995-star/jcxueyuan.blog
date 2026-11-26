@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LearningPathTool from '../../components/tools/LearningPathTool';
+import SakielCharacter from '../../components/art/SakielCharacter.astro';
+---
+
+<BaseLayout
+  title="全部课程与学习路线｜机场学院"
+  description="按十大校园章节循序渐进掌握零基础网络知识、学生预算规划、流量计算、全平台客户端配置与常见故障排查。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '全部课程' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <div class="senpai-dialogue" style="margin-bottom:1.75rem;">
+        <div class="senpai-dialogue-avatar">
+          <SakielCharacter state="encourage" size={80} />
+        </div>
+        <div>
+          <span class="badge badge-sakura">Senpai Learning · 十大校园课程</span>
+          <h1 style="margin-top:0.35rem;margin-bottom:0.3rem;">机场学院完整课程路线</h1>
+          <p style="margin:0;">不设强制登录与打卡诱导，按自己的节奏学习，进度仅保存在当前浏览器本地。</p>
+        </div>
+      </div>
+
+      <LearningPathTool client:load />
+    </div>
+  </section>
+</BaseLayout>

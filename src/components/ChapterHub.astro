@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SakielCharacter from './art/SakielCharacter.astro';
+import CampusSceneArt from './art/CampusSceneArt.astro';
+import { CAMPUS_CHAPTERS } from '../data/chapters';
+import { getArticlesByCategory } from '../data/articles';
+
+export interface Props {
+  chapterId: number;
+  categorySlug: string;
+  seoTitle: string;
+  description: string;
+  h1: string;
+  intro: string;
+  subtitle?: string;
+  audienceNote?: string;
+  showLearningPath?: boolean;
+  extraTools?: { label: string; url: string }[];
+}
+
+const {
+  chapterId,
+  categorySlug,
+  seoTitle,
+  description,
+  h1,
+  intro,
+  subtitle = '',
+  audienceNote = '',
+  showLearningPath = false,
+  extraTools = [],
+} = Astro.props;
+
+const chapter = CAMPUS_CHAPTERS.find((c) => c.id === chapterId) || CAMPUS_CHAPTERS[0];
+const articles = getArticlesByCategory(categorySlug);
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={description}
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: chapter.chineseTitle }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <div class="glass-panel" style="padding:1.75rem;margin-bottom:1.75rem;">
+        <div class="grid-2" style="align-items:center;">
+          <div>
+            <span class="badge badge-sakura">第 {chapter.id} 章 · {chapter.englishTitle}</span>
+            <h1 style="margin-top:0.5rem;">{h1}</h1>
+            <p>{intro}</p>
+            <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:0.85rem;">
+              场景：{chapter.scene} · 覆盖关键词：{chapter.keywordRange}
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+              {extraTools.map((t) => (
+                <a href={t.url} class="btn btn-primary btn-sm">{t.label}</a>
+              ))}
+              <a href="/courses/" class="btn btn-soft btn-sm">返回十大课程总览</a>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;">
+            <CampusSceneArt chapter={chapter.id} title={chapter.chineseTitle} />
+            <div style="display:flex;align-items:center;gap:0.75rem;background:rgba(255,255,255,0.88);padding:0.55rem 1rem;border-radius:999px;border:1px solid var(--sakura-pink);width:100%;max-width:420px;">
+              <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--sakura-pink);">
+                <SakielCharacter state={chapter.sakielState} size={52} />
+              </div>
+              <small style="color:var(--text-primary);font-weight:600;line-height:1.4;">SAKIEL · 樱羽学姐在本章陪你学习</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {audienceNote && (
+        <div class="audience-strip" style="margin-bottom:1.5rem;">
+          <span>🌸 {audienceNote}</span>
+        </div>
+      )}
+
+      <div class="section-header" style="margin-bottom:1.35rem;">
+        <h2 style="margin-bottom:0.3rem;">本章专题课堂（共 {articles.length} 篇）</h2>
+        {subtitle && <p style="margin:0;color:var(--text-secondary);">{subtitle}</p>}
+      </div>
+
+      <div class="grid-3">
+        {articles.map((art) => (
+          <article class="academy-card hub-article-card">
+            <div style="margin-bottom:0.55rem;">
+              <span class="badge badge-purple">关键词 {art.keywordIds.join('、')}</span>
+            </div>
+            <h3 style="font-size:1.06rem;margin-bottom:0.5rem;">
+              <a href={art.url} style="color:var(--text-primary);">{art.title}</a>
+            </h3>
+            <p class="hub-card-desc">
+              {art.description.length > 86 ? `${art.description.slice(0, 86)}…` : art.description}
+            </p>
+            <div class="hub-card-footer">
+              <small style="color:var(--text-muted);display:block;margin-bottom:0.65rem;">
+                阅读约 {art.readTime} · 更新 {art.updatedAt}
+              </small>
+              <a href={art.url} class="btn btn-sm btn-soft" style="width:100%;">立即阅读 →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {showLearningPath && (
+        <div class="notebook-card" style="margin-top:2rem;">
+          <div class="section-kicker">继续学习路线</div>
+          <h2 style="margin-bottom:0.85rem;">新生三步成长路线</h2>
+          <div class="grid-3">
+            <a href="/beginner/what-is-airport/" class="path-step-box">
+              <span class="badge badge-sakura">Step 01</span>
+              <h3>先认识机场</h3>
+              <p>弄懂机场、VPN、节点与订阅链接的基本概念，扫清术语障碍。</p>
+            </a>
+            <a href="/beginner/how-to-buy/" class="path-step-box">
+              <span class="badge badge-mint">Step 02</span>
+              <h3>再学会选购</h3>
+              <p>掌握月付试错、100GB 流量评估与 7 项独立筛选标准。</p>
+            </a>
+            <a href="/beginner/top-10-pitfalls/" class="path-step-box">
+              <span class="badge badge-purple">Step 03</span>
+              <h3>最后掌握使用与避坑</h3>
+              <p>安全安装 Clash 等开源客户端，绕开新手最容易踩的 10 个坑。</p>
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .audience-strip {
+    background: linear-gradient(135deg, #FDF0F5 0%, #F5F2FA 100%);
+    border: 1px solid var(--sakura-pink);
+    border-radius: var(--radius-pill);
+    padding: 0.65rem 1.25rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .hub-article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .hub-card-desc {
+    font-size: 0.87rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    flex: 1;
+    margin-bottom: 0.85rem;
+  }
+
+  .hub-card-footer {
+    margin-top: auto;
+    padding-top: 0.65rem;
+    border-top: 1px dashed var(--border-subtle);
+  }
+
+  .path-step-box {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid var(--border-sakura);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.15rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .path-step-box:hover {
+    transform: translateY(-2px);
+    border-color: var(--rose-deep);
+  }
+
+  .path-step-box h3 {
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1rem;
+  }
+
+  .path-step-box p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+</style>

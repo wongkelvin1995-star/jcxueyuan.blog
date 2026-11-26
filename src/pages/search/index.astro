@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SearchWidget from '../../components/SearchWidget';
+import { buildSearchIndex } from '../../data/search-index';
+
+const searchIndex = buildSearchIndex();
+---
+
+<BaseLayout
+  title="全站智能搜索｜机场学院"
+  description="搜索机场学院全部课程、50+基础术语、客户端教程、故障排查、18家品牌档案与套餐资料。"
+  noIndex={true}
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '全站搜索' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>全站智能搜索 · MOCHI 联想引擎</h1>
+      <p>支持中文关键词、英文术语、品牌名称、优惠码、套餐价格与同义词模糊匹配。</p>
+      <div class="academy-card">
+        <SearchWidget client:load entries={searchIndex} inline={true} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

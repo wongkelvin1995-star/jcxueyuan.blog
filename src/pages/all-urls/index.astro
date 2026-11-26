@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ALL_ARTICLES } from '../../data/articles';
+import { AIRPORTS } from '../../data/airports';
+import { CAMPUS_CHAPTERS } from '../../data/chapters';
+import { SEO_KEYWORDS } from '../../data/seo-keywords';
+
+const corePages = [
+  { label: '首页（24模块 + 30 FAQ）', url: '/' },
+  { label: '全部课程总览', url: '/courses/' },
+  { label: '全部18家机场对比库', url: '/airports/' },
+  { label: '入学知识测试', url: '/quiz/' },
+  { label: '全站智能搜索（noindex）', url: '/search/' },
+  { label: '我的学院个人中心（noindex）', url: '/profile/' },
+  { label: '原创校园 404 页面预览', url: '/404' },
+];
+
+const toolPages = [
+  { label: '学习路线 · Senpai Learning', url: '/tools/learning-path/' },
+  { label: '学生消费预算规划器 · Student Budget', url: '/tools/student-budget/' },
+  { label: '套餐流量数学计算器 · Traffic Classroom', url: '/tools/traffic-calculator/' },
+  { label: '50+术语知识词典 · Academy Dictionary', url: '/tools/dictionary/' },
+  { label: '全平台设备查询 · Device Classroom', url: '/tools/device-check/' },
+  { label: '学姐智能故障排查 · Smart Troubleshooter', url: '/tools/troubleshooter/' },
+];
+
+const hubPages = [
+  { label: '第1章 · 新生入门 Hub', url: '/beginner/' },
+  { label: '第2章 · 学生专区 Hub', url: '/student/' },
+  { label: '第3章 · 购买指南 Hub', url: '/buying/' },
+  { label: '第4章 · 流量课堂 Hub', url: '/traffic/' },
+  { label: '第5章 · 知识百科 Hub', url: '/knowledge/' },
+  { label: '第6章 · 电脑客户端课堂 Hub', url: '/tutorials/desktop/' },
+  { label: '第7章 · 手机客户端课堂 Hub', url: '/tutorials/mobile/' },
+  { label: '第8章 · 校园网络 Hub', url: '/campus-network/' },
+  { label: '第9章 · AI及国际学习 Hub', url: '/study/' },
+  { label: '第10章 · 学姐答疑 Hub', url: '/troubleshooting/' },
+];
+
+const trustPages = [
+  { label: '资料更新记录', url: '/updates/' },
+  { label: '推荐及编辑标准', url: '/methodology/' },
+  { label: '关于机场学院', url: '/about/' },
+  { label: '联系与数据纠错', url: '/contact/' },
+  { label: '推广关系说明', url: '/disclosure/' },
+  { label: '隐私政策', url: '/privacy/' },
+];
+
+const seoFiles = [
+  { label: 'Sitemap XML', url: '/sitemap.xml' },
+  { label: 'Robots.txt', url: '/robots.txt' },
+  { label: 'BingSiteAuth.xml', url: '/BingSiteAuth.xml' },
+];
+
+const totalStaticCount =
+  corePages.length +
+  toolPages.length +
+  hubPages.length +
+  trustPages.length +
+  ALL_ARTICLES.length +
+  AIRPORTS.length;
+---
+
+<BaseLayout
+  title="全站 URL 验收总览目录｜机场学院"
+  description="用于在浏览器中一站式检查机场学院全部页面的 URL、文章列表、18家品牌档案与100个SEO关键词映射。"
+  noIndex={true}
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '全站 URL 总览' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <div class="notebook-card" style="margin-bottom:1.5rem;">
+        <span class="badge badge-sakura">内部验收专用页面 · 已设置 noindex</span>
+        <h1 style="margin-top:0.4rem;">机场学院全站 URL 总览与点击检查表</h1>
+        <p style="margin-bottom:0;">
+          共整理 <strong>{totalStaticCount}</strong> 个页面入口（含 {ALL_ARTICLES.length} 篇原创知识文章、{AIRPORTS.length} 家品牌档案、10 个章节 Hub、6 个工具页与 6 个规范页），点击任意链接即可直接在浏览器核对页面内容与排版。
+        </p>
+      </div>
+
+      <!-- 1. 核心、工具、Hub、规范 -->
+      <div class="grid-2" style="margin-bottom:1.75rem;">
+        <div class="academy-card">
+          <h2>1. 核心入口与功能页（{corePages.length}）</h2>
+          <ul>
+            {corePages.map((p) => (
+              <li><a href={p.url} target="_blank">{p.label}</a> — <code>{p.url}</code></li>
+            ))}
+          </ul>
+          <h3>技术 SEO 文件（{seoFiles.length}）</h3>
+          <ul>
+            {seoFiles.map((p) => (
+              <li><a href={p.url} target="_blank">{p.label}</a> — <code>{p.url}</code></li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="academy-card">
+          <h2>2. 互动工具箱（{toolPages.length}）</h2>
+          <ul>
+            {toolPages.map((p) => (
+              <li><a href={p.url} target="_blank">{p.label}</a> — <code>{p.url}</code></li>
+            ))}
+          </ul>
+          <h3>可信度与合规页面（{trustPages.length}）</h3>
+          <ul>
+            {trustPages.map((p) => (
+              <li><a href={p.url} target="_blank">{p.label}</a> — <code>{p.url}</code></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. 十大章节 Hub -->
+      <div class="academy-card" style="margin-bottom:1.75rem;">
+        <h2>3. 十大校园章节 Hub 页面（{hubPages.length}）</h2>
+        <div class="grid-2">
+          {hubPages.map((p) => (
+            <div style="padding:0.45rem 0;border-bottom:1px solid var(--border-subtle);">
+              <a href={p.url} target="_blank"><strong>{p.label}</strong></a> — <code>{p.url}</code>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- 3. 18 家品牌独立档案 -->
+      <div class="academy-card" style="margin-bottom:1.75rem;">
+        <h2>4. 全部 18 家机场品牌独立档案（按当前顺序 1–18）</h2>
+        <div class="grid-3">
+          {AIRPORTS.map((b) => (
+            <div style="padding:0.45rem 0.65rem;border:1px solid var(--border-subtle);border-radius:10px;">
+              <span>#{String(b.order).padStart(2, '0')} </span>
+              <a href={`/airports/${b.slug}/`} target="_blank"><strong>{b.name}</strong></a>
+              <div style="font-size:0.8rem;color:var(--text-muted);"><code>/airports/{b.slug}/</code></div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- 4. 全部原创知识文章 -->
+      <div class="academy-card" style="margin-bottom:1.75rem;">
+        <h2>5. 全部 {ALL_ARTICLES.length} 篇原创知识文章 URL</h2>
+        {CAMPUS_CHAPTERS.map((ch) => {
+          const chArts = ALL_ARTICLES.filter((a) => a.chapterId === ch.id);
+          return (
+            <div style="margin-bottom:1.15rem;">
+              <h3 style="font-size:1rem;color:var(--rose-deep);margin-bottom:0.4rem;">
+                第 {ch.id} 章 · {ch.chineseTitle}（{chArts.length} 篇）
+              </h3>
+              <ul style="font-size:0.9rem;">
+                {chArts.map((art) => (
+                  <li>
+                    <a href={art.url} target="_blank"><strong>{art.title}</strong></a>
+                    {' '}— <code>{art.url}</code>
+                    <span class="badge badge-purple" style="margin-left:0.4rem;">关键词 {art.keywordIds.join('、')}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+
+      <!-- 5. 100 个 SEO 关键词映射表 -->
+      <div class="academy-card">
+        <h2>6. 100 个 Bing SEO 候选关键词 → 目标 URL 映射表</h2>
+        <div class="table-scroll">
+          <table class="academy-table">
+            <thead>
+              <tr>
+                <th>编号</th>
+                <th>候选关键词</th>
+                <th>所属集群</th>
+                <th>搜索意图</th>
+                <th>优先级</th>
+                <th>目标 URL（点击访问）</th>
+              </tr>
+            </thead>
+            <tbody>
+              {SEO_KEYWORDS.map((k) => (
+                <tr>
+                  <td><strong>{k.id}</strong></td>
+                  <td>{k.keyword}</td>
+                  <td>{k.cluster}</td>
+                  <td>{k.intent}</td>
+                  <td><span class="badge badge-sakura">{k.priority}</span></td>
+                  <td><a href={k.targetUrl} target="_blank"><code>{k.targetUrl}</code> ↗</a></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

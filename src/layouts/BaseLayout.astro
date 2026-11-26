@@ -1,0 +1,748 @@
+---
+import '../styles/global.css';
+import CampusAtmosphere from '../components/CampusAtmosphere.astro';
+import SearchWidget from '../components/SearchWidget';
+import { buildSearchIndex } from '../data/search-index';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  breadcrumbs?: { label: string; url?: string }[];
+  articleSchema?: {
+    headline: string;
+    datePublished: string;
+    dateModified: string;
+  };
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = 'https://jcxueyuan.blog/og-sakura-academy.svg',
+  noIndex = false,
+  breadcrumbs = [],
+  articleSchema,
+} = Astro.props;
+
+const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://jcxueyuan.blog').toString();
+const searchIndex = buildSearchIndex();
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: '机场学院 Airport Academy',
+  alternateName: 'Sakura Academy MAX',
+  url: 'https://jcxueyuan.blog/',
+  inLanguage: 'zh-CN',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://jcxueyuan.blog/search/?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const breadcrumbJsonLd = breadcrumbs.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((b, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: b.label,
+        ...(b.url ? { item: new URL(b.url, 'https://jcxueyuan.blog').toString() } : {}),
+      })),
+    }
+  : null;
+
+const articleJsonLd = articleSchema
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: articleSchema.headline,
+      description,
+      datePublished: articleSchema.datePublished,
+      dateModified: articleSchema.dateModified,
+      author: {
+        '@type': 'Organization',
+        name: '机场学院编辑部（SAKIEL · 樱羽学姐企划组）',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: '机场学院 jcxueyuan.blog',
+        url: 'https://jcxueyuan.blog/',
+      },
+    }
+  : null;
+
+const navLinks = [
+  { label: '首页', url: '/' },
+  { label: '新生入门', url: '/beginner/' },
+  { label: '学生专区', url: '/student/' },
+  { label: '购买指南', url: '/buying/' },
+  { label: '知识课堂', url: '/knowledge/' },
+  { label: '设备教程', url: '/tutorials/desktop/' },
+  { label: '校园网络', url: '/campus-network/' },
+  { label: 'AI学习', url: '/study/' },
+  { label: '学姐答疑', url: '/troubleshooting/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {noIndex && <meta name="robots" content="noindex, follow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={articleSchema ? 'article' : 'website'} />
+    <meta property="og:site_name" content="机场学院 Airport Academy" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="zh_CN" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+    {breadcrumbJsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+    )}
+    {articleJsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+    )}
+
+    <script is:inline>
+      // Restore reading preferences before first paint
+      try {
+        const raw = localStorage.getItem('sakura_academy_profile_v1');
+        if (raw) {
+          const p = JSON.parse(raw);
+          if (p?.settings?.largeFont) document.documentElement.setAttribute('data-font-size', 'large');
+          if (p?.settings?.reduceMotion) document.documentElement.setAttribute('data-reduce-motion', 'true');
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳至正文内容</a>
+    <CampusAtmosphere />
+
+    <!-- Glass Top Navigation -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand-logo" aria-label="机场学院首页">
+          <span class="brand-sakura-dot" aria-hidden="true">✿</span>
+          <span class="brand-text">
+            <strong>机场学院</strong>
+            <small>Airport Academy</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="主导航">
+          {navLinks.map((link) => {
+            const active =
+              link.url === '/'
+                ? currentPath === '/'
+                : currentPath.startsWith(link.url);
+            return (
+              <a href={link.url} class={`nav-item ${active ? 'is-active' : ''}`}>
+                {link.label}
+              </a>
+            );
+          })}
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="icon-btn"
+            id="open-search-btn"
+            aria-label="全站搜索"
+            title="全站搜索"
+          >
+            🔍 <span class="hide-sm">搜索</span>
+          </button>
+          <a href="/profile/" class="icon-btn" title="我的收藏与学院中心" aria-label="我的学院">
+            🎀 <span class="hide-sm">我的学院</span>
+          </a>
+          <button
+            type="button"
+            class="icon-btn"
+            id="reading-settings-btn"
+            aria-label="阅读设置"
+            title="阅读设置（字号/动效）"
+          >
+            Aa
+          </button>
+        </div>
+      </div>
+
+      <!-- Reading Settings Popover -->
+      <div class="settings-popover glass-panel" id="reading-settings-panel" hidden>
+        <div class="settings-row">
+          <span>大号护眼字号</span>
+          <button type="button" class="btn btn-sm btn-soft" id="toggle-font-btn">切换</button>
+        </div>
+        <div class="settings-row">
+          <span>减弱樱花动效</span>
+          <button type="button" class="btn btn-sm btn-soft" id="toggle-motion-btn">切换</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal-backdrop" id="search-modal" hidden role="dialog" aria-modal="true" aria-label="全站智能搜索">
+      <div class="search-modal-card glass-panel">
+        <div class="search-modal-head">
+          <strong>✿ 机场学院智能搜索 · MOCHI 联想引擎</strong>
+          <button type="button" class="btn btn-sm btn-soft" id="close-search-btn">关闭 Esc</button>
+        </div>
+        <SearchWidget client:load entries={searchIndex} />
+      </div>
+    </div>
+
+    <main id="main-content">
+      {breadcrumbs.length > 0 && (
+        <div class="container" style="padding-top: 1.25rem;">
+          <nav class="breadcrumb" aria-label="面包屑导航">
+            {breadcrumbs.map((b, idx) => (
+              <>
+                {idx > 0 && <span aria-hidden="true">/</span>}
+                {b.url ? <a href={b.url}>{b.label}</a> : <span>{b.label}</span>}
+              </>
+            ))}
+          </nav>
+        </div>
+      )}
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">✿ 机场学院 · Sakura Academy MAX</div>
+          <p class="footer-desc">
+            先学会，再选择，最后才考虑购买。面向学生党、大学生及零基础用户的知识资讯与选购博客。
+            <br />
+            <small>注：SAKIEL（樱羽学姐）与 MOCHI（樱团）均为本站虚构品牌向导角色，不冒充真实高校、教师或技术机构。</small>
+          </p>
+        </div>
+        <div>
+          <h4>十大校园课堂</h4>
+          <ul class="footer-links">
+            <li><a href="/courses/">全部课程路线</a></li>
+            <li><a href="/student/budget/">学生低预算专区</a></li>
+            <li><a href="/buying/">第一次购买指南</a></li>
+            <li><a href="/traffic/student/">流量数学课堂</a></li>
+            <li><a href="/airports/">18家品牌数据库</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>互动工具箱</h4>
+          <ul class="footer-links">
+            <li><a href="/tools/student-budget/">学生预算规划器</a></li>
+            <li><a href="/tools/traffic-calculator/">流量数学计算器</a></li>
+            <li><a href="/tools/dictionary/">50+术语知识词典</a></li>
+            <li><a href="/tools/device-check/">全平台设备查询</a></li>
+            <li><a href="/tools/troubleshooter/">智能故障排查</a></li>
+            <li><a href="/quiz/">入学知识测试</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>可信度与规范</h4>
+          <ul class="footer-links">
+            <li><a href="/methodology/">推荐及编辑标准</a></li>
+            <li><a href="/updates/">资料更新记录</a></li>
+            <li><a href="/disclosure/">推广关系说明</a></li>
+            <li><a href="/about/">关于机场学院</a></li>
+            <li><a href="/contact/">联系与纠错入口</a></li>
+            <li><a href="/privacy/">隐私政策</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026–2027 jcxueyuan.blog 机场学院 · 保留原创内容版权</span>
+        <span>历史价格与品牌字段核验记录请以各档案页标注日期为准</span>
+      </div>
+    </footer>
+
+    <!-- Mobile Fixed Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" aria-label="移动端快捷导航">
+      <a href="/" class={currentPath === '/' ? 'is-active' : ''}>
+        <span>🏠</span><small>首页</small>
+      </a>
+      <a href="/courses/" class={currentPath.startsWith('/courses') ? 'is-active' : ''}>
+        <span>📚</span><small>课程</small>
+      </a>
+      <a href="/student/" class={currentPath.startsWith('/student') ? 'is-active' : ''}>
+        <span>🎓</span><small>学生</small>
+      </a>
+      <a href="/search/" class={currentPath.startsWith('/search') ? 'is-active' : ''}>
+        <span>🔍</span><small>搜索</small>
+      </a>
+      <a href="/profile/" class={currentPath.startsWith('/profile') ? 'is-active' : ''}>
+        <span>🎀</span><small>我的</small>
+      </a>
+    </nav>
+
+    <style>
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: var(--nav-height);
+        background: var(--glass-bg-strong);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--glass-border);
+      }
+
+      .header-inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        color: var(--text-primary);
+        flex-shrink: 0;
+      }
+
+      .brand-sakura-dot {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+        background: var(--grad-sakura-dream);
+        color: #FFFFFF;
+        display: grid;
+        place-items: center;
+        font-size: 1.15rem;
+        box-shadow: 0 4px 12px rgba(173, 85, 125, 0.25);
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.15;
+      }
+
+      .brand-text strong {
+        font-size: 1.05rem;
+        color: var(--text-primary);
+      }
+
+      .brand-text small {
+        font-size: 0.7rem;
+        color: var(--rose-deep);
+        font-weight: 600;
+      }
+
+      .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .desktop-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-item {
+        padding: 0.42rem 0.68rem;
+        border-radius: var(--radius-pill);
+        font-size: 0.87rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        white-space: nowrap;
+      }
+
+      .nav-item:hover,
+      .nav-item.is-active {
+        background: var(--rose-soft-bg);
+        color: var(--rose-deep);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        flex-shrink: 0;
+      }
+
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.42rem 0.75rem;
+        border-radius: var(--radius-pill);
+        border: 1px solid var(--border-sakura);
+        background: #FFFFFF;
+        color: var(--text-primary);
+        font-size: 0.84rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .icon-btn:hover {
+        background: var(--rose-soft-bg);
+        color: var(--rose-deep);
+      }
+
+      .settings-popover {
+        position: absolute;
+        right: 1.25rem;
+        top: calc(var(--nav-height) + 8px);
+        padding: 1rem 1.2rem;
+        width: 240px;
+        z-index: 120;
+      }
+
+      .settings-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.45rem 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      /* Search Modal */
+      .search-modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(62, 47, 67, 0.42);
+        backdrop-filter: blur(6px);
+        z-index: 200;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 5vh 1rem 1rem;
+      }
+
+      .search-modal-backdrop[hidden] {
+        display: none;
+      }
+
+      .search-modal-card {
+        width: 100%;
+        max-width: 760px;
+        padding: 1.35rem;
+        max-height: 86vh;
+        overflow-y: auto;
+        background: #FFFDFB;
+      }
+
+      .search-modal-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        color: var(--rose-deep);
+      }
+
+      /* Search Widget global styles */
+      :global(.search-input-wrap) {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      :global(.search-icon) {
+        position: absolute;
+        left: 1rem;
+        pointer-events: none;
+      }
+
+      :global(.search-input) {
+        width: 100%;
+        padding: 0.82rem 2.6rem 0.82rem 2.7rem;
+        border-radius: var(--radius-pill);
+        border: 1.5px solid var(--border-sakura);
+        background: #FFFFFF;
+        font-size: 0.98rem;
+        color: var(--text-primary);
+      }
+
+      :global(.search-clear) {
+        position: absolute;
+        right: 0.9rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
+
+      :global(.search-hot-row) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.4rem;
+        margin: 0.85rem 0;
+      }
+
+      :global(.hot-label) {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      :global(.hot-chip) {
+        background: var(--rose-soft-bg);
+        color: var(--rose-deep);
+        border: 1px solid rgba(173, 85, 125, 0.22);
+        border-radius: var(--radius-pill);
+        padding: 0.22rem 0.65rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      :global(.hot-chip:hover) {
+        background: var(--sakura-pink);
+        color: #3E2F43;
+      }
+
+      :global(.search-results-box) {
+        margin-top: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      :global(.search-group-title) {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--rose-deep);
+        margin-bottom: 0.35rem;
+        padding-left: 0.25rem;
+      }
+
+      :global(.search-result-item) {
+        display: block;
+        padding: 0.65rem 0.9rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-subtle);
+        background: #FFFFFF;
+        margin-bottom: 0.4rem;
+      }
+
+      :global(.search-result-item:hover),
+      :global(.search-result-item.is-active) {
+        background: var(--rose-soft-bg);
+        border-color: var(--rose-deep);
+      }
+
+      :global(.search-result-title) {
+        font-weight: 700;
+        color: var(--text-primary);
+        font-size: 0.94rem;
+      }
+
+      :global(.search-result-sub) {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+
+      /* Footer */
+      .site-footer {
+        margin-top: 4rem;
+        background: linear-gradient(180deg, rgba(253, 240, 245, 0.65) 0%, #F7EEF4 100%);
+        border-top: 1px solid var(--border-sakura);
+        padding: 3rem 0 2rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-brand {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--rose-deep);
+        margin-bottom: 0.75rem;
+      }
+
+      .footer-desc {
+        font-size: 0.88rem;
+        color: var(--text-secondary);
+      }
+
+      .site-footer h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.45rem;
+        font-size: 0.88rem;
+      }
+
+      .footer-links a {
+        color: var(--text-secondary);
+      }
+
+      .footer-links a:hover {
+        color: var(--rose-deep);
+      }
+
+      .footer-bottom {
+        margin-top: 2rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--border-subtle);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.75rem;
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+
+      /* Mobile Bottom Nav */
+      .mobile-bottom-nav {
+        display: none;
+      }
+
+      @media (max-width: 1080px) {
+        .desktop-nav {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+        }
+        .hide-sm {
+          display: none;
+        }
+        .mobile-bottom-nav {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: var(--mobile-bar-height);
+          background: var(--glass-bg-strong);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border-top: 1px solid var(--glass-border);
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          z-index: 110;
+        }
+        .mobile-bottom-nav a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.12rem;
+          color: var(--text-secondary);
+          font-size: 1.1rem;
+        }
+        .mobile-bottom-nav small {
+          font-size: 0.72rem;
+          font-weight: 600;
+        }
+        .mobile-bottom-nav a.is-active {
+          color: var(--rose-deep);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <script>
+      const openBtn = document.getElementById('open-search-btn');
+      const closeBtn = document.getElementById('close-search-btn');
+      const modal = document.getElementById('search-modal');
+
+      function openSearch() {
+        if (!modal) return;
+        modal.hidden = false;
+        const inp = modal.querySelector('input');
+        setTimeout(() => inp?.focus(), 40);
+      }
+
+      function closeSearch() {
+        if (!modal) return;
+        modal.hidden = true;
+      }
+
+      openBtn?.addEventListener('click', openSearch);
+      closeBtn?.addEventListener('click', closeSearch);
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal) closeSearch();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && !modal.hidden) closeSearch();
+      });
+
+      // Reading settings popover
+      const settingsBtn = document.getElementById('reading-settings-btn');
+      const settingsPanel = document.getElementById('reading-settings-panel');
+      const toggleFontBtn = document.getElementById('toggle-font-btn');
+      const toggleMotionBtn = document.getElementById('toggle-motion-btn');
+
+      settingsBtn?.addEventListener('click', () => {
+        if (settingsPanel) settingsPanel.hidden = !settingsPanel.hidden;
+      });
+
+      function updateSetting(key: 'largeFont' | 'reduceMotion') {
+        try {
+          const raw = localStorage.getItem('sakura_academy_profile_v1');
+          const data = raw ? JSON.parse(raw) : { settings: {} };
+          data.settings = data.settings || {};
+          data.settings[key] = !data.settings[key];
+          localStorage.setItem('sakura_academy_profile_v1', JSON.stringify(data));
+          document.documentElement.setAttribute(
+            key === 'largeFont' ? 'data-font-size' : 'data-reduce-motion',
+            data.settings[key] ? (key === 'largeFont' ? 'large' : 'true') : (key === 'largeFont' ? 'normal' : 'false')
+          );
+        } catch {}
+      }
+
+      toggleFontBtn?.addEventListener('click', () => updateSetting('largeFont'));
+      toggleMotionBtn?.addEventListener('click', () => updateSetting('reduceMotion'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LearningPathTool from '../../../components/tools/LearningPathTool';
+---
+
+<BaseLayout
+  title="学习路线规划 · Senpai Learning｜机场学院"
+  description="机场学院十大课程学习路线与本地完成进度记录，支持收藏课程与解锁纪念徽章。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '工具箱', url: '/courses/' }, { label: '学习路线' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>学习路线 · Senpai Learning</h1>
+      <p>勾选你已掌握的章节，系统会在本地自动记录学习进度并推荐下一课。</p>
+      <LearningPathTool client:load />
+    </div>
+  </section>
+</BaseLayout>

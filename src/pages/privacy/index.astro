@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="隐私政策与本地数据说明｜机场学院"
+  description="机场学院不强制登录注册、不收集个人订阅链接或密码，学习进度与笔记全部仅保存于你的浏览器本地。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '隐私政策' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>隐私政策与本地数据说明</h1>
+      <div class="academy-card">
+        <ul>
+          <li><strong>无需账号注册：</strong>本站所有课程、工具与知识测试均可免登录使用。</li>
+          <li><strong>本地存储机制：</strong>“我的学院”中的学习进度、笔记、收藏、预算与流量计算记录仅保存在你当前浏览器的 <code>localStorage</code> 中，不会上传至外部数据库。你可以随时在“我的学院”一键清空全部本地数据。</li>
+          <li><strong>绝不收集敏感凭证：</strong>智能故障排查工具与全站搜索均在本地运行，绝不要求输入你的机场订阅链接、账号密码或支付凭证。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

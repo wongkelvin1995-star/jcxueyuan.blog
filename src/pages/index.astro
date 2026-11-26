@@ -1,0 +1,790 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SakielCharacter from '../components/art/SakielCharacter.astro';
+import MochiMascot from '../components/art/MochiMascot.astro';
+import CampusSceneArt from '../components/art/CampusSceneArt.astro';
+import {
+  AIRPORTS,
+  evaluateStudentFriendliness,
+  getDatabaseStats,
+  getUnder10Summary,
+  getUnder20MonthlyBrands,
+} from '../data/airports';
+import { CAMPUS_CHAPTERS } from '../data/chapters';
+import { ALL_ARTICLES } from '../data/articles';
+import { HOMEPAGE_FAQS } from '../data/faqs';
+import { CLIENT_SOFTWARES } from '../data/clients';
+import { DICTIONARY_TERMS } from '../data/dictionary';
+
+const stats = getDatabaseStats();
+const under10 = getUnder10Summary();
+const under20 = getUnder20MonthlyBrands();
+
+const evaluatedBrands = AIRPORTS.map((b) => ({
+  brand: b,
+  eval: evaluateStudentFriendliness(b),
+}));
+
+const studentTopPicks = evaluatedBrands.slice(0, 6);
+---
+
+<BaseLayout
+  title="机场学院｜2027学生党机场推荐、新手入门与客户端教程"
+  description="机场学院是面向学生党、大学生及零基础用户的网络知识博客，提供低预算机场选购、第一次购买指南、套餐流量计算、Windows与手机客户端教程、校园网络知识、AI学习及常见故障排查内容。"
+  canonical="https://jcxueyuan.blog/"
+>
+  <!-- 01. 浪漫学姐品牌Hero -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badges">
+          <span class="badge badge-sakura">✿ Sakura Academy MAX</span>
+          <span class="badge badge-purple">Airport Academy · jcxueyuan.blog</span>
+        </div>
+        <h1>机场学院：2027学生党机场推荐与零基础入门学习指南</h1>
+        <p class="hero-slogan">从第一次认识机场开始，学姐陪你慢慢学会。</p>
+        <p class="hero-en-slogan">Every Connection Begins with Learning.</p>
+        <p class="hero-lead">
+          先学会，再选择，最后才考虑购买。机场学院由原创向导 <strong>SAKIEL · 樱羽学姐</strong> 与知识精灵 <strong>MOCHI · 樱团</strong> 陪伴，专为大学生、学生党及零基础新手打造：覆盖低预算月付核验、流量数学、Windows/macOS/手机客户端教程、校园网络常识与故障排查。
+        </p>
+        <div class="hero-ctas">
+          <a href="/beginner/" class="btn btn-primary">🌸 开始入学学习</a>
+          <a href="/student/under-20/" class="btn btn-secondary">🎓 查看学生套餐</a>
+          <a href="/tutorials/desktop/" class="btn btn-soft">💻 进入客户端课堂</a>
+          <a href="/tools/troubleshooter/" class="btn btn-soft">🩺 学姐故障答疑</a>
+        </div>
+      </div>
+
+      <div class="hero-visual glass-panel">
+        <div class="hero-sakiel-wrap">
+          <img
+            src="/assets/sakiel-hero.jpg"
+            alt="SAKIEL · 樱羽学姐原创角色立绘与春日樱花大学校园大道"
+            class="hero-sakiel-img"
+            width="896"
+            height="1152"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="hero-mochi-badge">
+          <MochiMascot mood="happy" size={58} />
+          <div class="mochi-speech">
+            <strong>SAKIEL · 樱羽学姐</strong>
+            <span>“不用着急下单，先花 5 分钟逛逛樱花课堂吧！”</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Real Database Stats Strip -->
+    <div class="container">
+      <div class="stats-strip glass-panel">
+        <div class="stat-item">
+          <strong>{CAMPUS_CHAPTERS.length} 大校园章节</strong>
+          <span>完整课程体系</span>
+        </div>
+        <div class="stat-item">
+          <strong>{stats.brandCount} 家品牌档案</strong>
+          <span>共 {stats.planCount} 个真实套餐</span>
+        </div>
+        <div class="stat-item">
+          <strong>{ALL_ARTICLES.length} 篇原创知识</strong>
+          <span>覆盖 100 个选题关键词</span>
+        </div>
+        <div class="stat-item">
+          <strong>{stats.exclusiveToolsCount} 项实用工具</strong>
+          <span>本地计算与排查</span>
+        </div>
+        <div class="stat-item">
+          <strong>{stats.latestVerifiedDate}</strong>
+          <span>最新资料核验日期</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02. 学姐欢迎寄语 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="senpai-dialogue">
+        <div class="senpai-dialogue-avatar">
+          <SakielCharacter state="teaching" size={80} />
+        </div>
+        <div>
+          <div class="section-kicker">02 · 学姐欢迎寄语</div>
+          <h2 style="margin-bottom:0.4rem;">欢迎来到机场学院，我是虚构学习向导 SAKIEL · 樱羽学姐</h2>
+          <p style="margin-bottom:0;">
+            许多刚上大学的同学第一次查英文文献或找公开课时，很容易被网络上复杂的术语、夸张的“不限速无限流量”广告或昂贵的年付套餐弄晕。在机场学院，我们不鼓励盲目消费，而是先用通俗的笔记带你弄懂基本原理、算清每月真实流量，再依据公开核验的品牌资料做理性的决定。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03. 零基础新生入学指南 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">03 · 新生入学第一课</div>
+        <h2>零基础新生入学指南：四步完成从入门到稳定学习</h2>
+      </div>
+      <div class="grid-4">
+        <a href="/knowledge/airport-vs-vpn/" class="academy-card step-card">
+          <span class="badge badge-sakura">Step 1 · 懂概念</span>
+          <h3>分清机场、VPN与订阅</h3>
+          <p>用 5 分钟理解什么是节点、订阅链接、规则分流与流量倍率，不再被行话吓到。</p>
+        </a>
+        <a href="/tools/traffic-calculator/" class="academy-card step-card">
+          <span class="badge badge-mint">Step 2 · 算需求</span>
+          <h3>估算每月真实流量</h3>
+          <p>查文献和用 AI 每月其实只需几 GB；看 720P/1080P 公开课才需要 50–100GB。</p>
+        </a>
+        <a href="/tutorials/desktop/" class="academy-card step-card">
+          <span class="badge badge-sky">Step 3 · 装工具</span>
+          <h3>选对开源正规客户端</h3>
+          <p>认准 GitHub 开源的 Clash Verge Rev、v2rayN、FlClash 或外区正版小火箭。</p>
+        </a>
+        <a href="/student/monthly/" class="academy-card step-card">
+          <span class="badge badge-purple">Step 4 · 轻试错</span>
+          <h3>先月付再评估长期方案</h3>
+          <p>首购控制在 15–20 元月付以内，确认宿舍和手机流量都顺畅后再考虑续费。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. 十大课程导航 -->
+  <section class="section-block" id="chapters">
+    <div class="container">
+      <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <div class="section-kicker">04 · 视觉小说式十大校园世界观</div>
+          <h2>十大课程导航：从樱花入口到黄昏答疑室</h2>
+        </div>
+        <a href="/courses/" class="btn btn-sm btn-secondary">查看全部学习路线 →</a>
+      </div>
+      <div class="grid-2">
+        {CAMPUS_CHAPTERS.map((ch) => (
+          <a href={ch.primaryUrl} class="academy-card chapter-card">
+            <div class="chapter-art-wrap">
+              <CampusSceneArt chapter={ch.id} title={`${ch.chineseTitle} - ${ch.englishTitle}`} />
+            </div>
+            <div class="chapter-body">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;margin-bottom:0.35rem;">
+                <span class="badge badge-sakura">第 {ch.id} 章 · 关键词 {ch.keywordRange}</span>
+                <small style="color:var(--text-muted);font-weight:600;">{ch.englishTitle}</small>
+              </div>
+              <h3>{ch.chineseTitle}</h3>
+              <p style="font-size:0.88rem;margin-bottom:0.4rem;">{ch.purpose}</p>
+              <small style="color:var(--text-muted);">场景：{ch.scene}</small>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 05. 学生党机场推荐 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">05 · 基于学生友好度客观评价模型</div>
+        <h2>学生党机场推荐：月付门槛 ≤ 25 元的已核验入门参考</h2>
+        <p>
+          以下排序依据本站公开的 <strong>Academy Student Evaluation</strong>（学生预算 25%、新手难度 20%、性价比 15%、短周期灵活性 15%、客户端兼容 10%、客服支持 10%、政策透明度 5%）计算，与推广佣金完全无关。
+        </p>
+      </div>
+      <div class="grid-3">
+        {studentTopPicks.map(({ brand, eval: ev }) => (
+          <div class="academy-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+              <span class="badge badge-mint">友好度 {ev.totalScore} 分</span>
+              <span class="badge badge-purple">{ev.difficultyLabel}</span>
+            </div>
+            <h3><a href={`/airports/${brand.slug}/`}>{brand.name}</a></h3>
+            <p style="font-size:0.88rem;">{brand.summary.slice(0, 86)}…</p>
+            <div style="font-size:0.86rem;color:var(--text-primary);margin-bottom:0.8rem;">
+              <div>月付起步：<strong>{brand.minMonthlyPrice ? `¥${brand.minMonthlyPrice}/月` : '暂无纯月付'}</strong></div>
+              <div>优惠码：<code>{brand.couponCode}</code> · 核验：{brand.priceDate}</div>
+            </div>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <a href={`/airports/${brand.slug}/`} class="btn btn-sm btn-secondary">阅读学院档案</a>
+              <a href={brand.affUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-sm btn-primary">官网了解 ↗</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 & 07. 10元以下 & 20元以内机场专区 -->
+  <section class="section-block">
+    <div class="container grid-2">
+      <!-- 06. 10元以下专区 -->
+      <div class="notebook-card">
+        <div class="section-kicker">06 · 10元以下机场专区（实证核验）</div>
+        <h2>10元以下机场存在吗？</h2>
+        <p>
+          <strong>纯月付核验结果：</strong>在已核验的 {stats.brandCount} 家品牌中，目前 <strong>没有</strong> 10 元/月及以下的真实月付套餐（当前最低月付为唯兔云 ¥14.9/月）。本站绝不为了填充专区而把年付折合价伪装成月付价。
+        </p>
+        <p>
+          <strong>年付折合月均 ≤ 10 元的已核验方案：</strong>共有 {under10.yearlyAvgUnder10.length} 个品牌提供 79–119 元/年轻量套餐（折合约 ¥6.58–¥9.92/月），例如无忧链接（¥79/年）、唯兔云（¥79.9/年）、飞猫云（¥84/年）等，但需一次性年付且存在预付风险。
+        </p>
+        <a href="/student/under-10/" class="btn btn-sm btn-secondary">查看10元以下完整核验专题 →</a>
+      </div>
+
+      <!-- 07. 20元以内专区 -->
+      <div class="notebook-card">
+        <div class="section-kicker">07 · 20元以内机场专区（真实月付）</div>
+        <h2>真实月付 ≤ 20 元品牌清单</h2>
+        <p>以下 {under20.length} 家品牌均已核验具备 20 元及以内的真实单月付款套餐，适合学生低成本试错：</p>
+        <ul>
+          {under20.map((item) => (
+            <li>
+              <a href={`/airports/${item.brand.slug}/`}><strong>{item.brand.name}</strong></a>：
+              真实月付 <strong>¥{item.lowestMonthly}/月</strong>（{item.plans[0]?.dataText} · 核验 {item.brand.priceDate}）
+            </li>
+          ))}
+        </ul>
+        <a href="/student/under-20/" class="btn btn-sm btn-primary">进入20元以内专区 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08, 09, 10. 预算规划、第一次购买与风险注意 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">08–10 · 新生消费与避坑课堂</div>
+        <h2>学生预算规划、第一次购买流程与风险提示</h2>
+      </div>
+      <div class="grid-3">
+        <div class="academy-card">
+          <span class="badge badge-gold">08 · 学生消费预算规划</span>
+          <h3>每月生活费该留多少给工具？</h3>
+          <p>
+            建议将工具预算控制在每月 15–25 元（约一杯奶茶钱）。避免一次性冲动购买两年付或三年付，哪怕折合单价更低，学生假期与校园网环境变化快，按月灵活调整更划算。
+          </p>
+          <a href="/tools/student-budget/" class="btn btn-sm btn-soft">打开学生预算规划器 →</a>
+        </div>
+        <div class="academy-card">
+          <span class="badge badge-sakura">09 · 第一次购买机场指南</span>
+          <h3>首购四步标准流程</h3>
+          <p>
+            使用独立邮箱与密码注册 → 选择 1 个月最短周期 → 核对优惠码与实付金额 → 在用户中心复制订阅链接导入已安装好的开源客户端。
+          </p>
+          <a href="/buying/" class="btn btn-sm btn-soft">查看完整首购指南 →</a>
+        </div>
+        <div class="academy-card">
+          <span class="badge badge-purple">10 · 机场购买风险及注意事项</span>
+          <h3>下单前必须核对的红线</h3>
+          <p>
+            虚拟服务大多不支持无理由退款；严禁与陌生人合租账号；警惕“永久免费”或强制下载未知闭源软件的站点；切勿泄露个人订阅链接。
+          </p>
+          <a href="/buying/checklist/" class="btn btn-sm btn-soft">阅读8项避坑清单 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 & 12. 流量计算 & 机场基础知识课堂 -->
+  <section class="section-block">
+    <div class="container grid-2">
+      <div class="academy-card">
+        <div class="section-kicker">11 · 套餐流量及费用计算</div>
+        <h2>每月 50GB 还是 100GB？一分钟算清</h2>
+        <p>
+          查英文 PDF 文献与使用 AI 文本对话每月仅消耗 2–5GB；真正消耗流量的是 1080P 在线公开课（约 1.8GB/小时）以及误用 2x/3x 高倍率节点。保持“规则模式”与“1x 节点”，50GB 足够大多数轻度学习同学使用。
+        </p>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <a href="/tools/traffic-calculator/" class="btn btn-sm btn-primary">打开流量计算器</a>
+          <a href="/traffic/multiplier/" class="btn btn-sm btn-secondary">看懂流量倍率</a>
+        </div>
+      </div>
+
+      <div class="academy-card">
+        <div class="section-kicker">12 · 机场基础知识课堂</div>
+        <h2>已收录 {DICTIONARY_TERMS.length} 个核心网络术语词典</h2>
+        <p>
+          搞不懂机场和 VPN 的区别、订阅链接是什么、TUN 模式与系统代理有什么不同、IEPL/IPLC 专线是什么意思？樱花知识图书馆为你准备了零基础词典。
+        </p>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <a href="/tools/dictionary/" class="btn btn-sm btn-primary">进入知识词典</a>
+          <a href="/knowledge/airport-vs-vpn/" class="btn btn-sm btn-secondary">机场 vs VPN</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13, 14, 15. 客户端教程与学生设备兼容性矩阵 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">13–15 · 全平台客户端课堂与设备矩阵</div>
+        <h2>Windows、Mac、安卓与苹果客户端教程及兼容矩阵</h2>
+        <p>仅推荐 GitHub 开源或官方应用商店渠道工具，绝不提供盗版或来路不明的安装包。</p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:1.5rem;">
+        {CLIENT_SOFTWARES.map((c) => (
+          <div class="academy-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
+              <span class="badge badge-sky">{c.difficulty}</span>
+              <small style="color:var(--text-muted);">{c.license}</small>
+            </div>
+            <h3><a href={c.tutorialUrl}>{c.name}</a></h3>
+            <p style="font-size:0.86rem;">适用：{c.platforms.join(' / ')}</p>
+            <p style="font-size:0.86rem;">{c.summary}</p>
+            <a href={c.tutorialUrl} class="btn btn-sm btn-soft">查看教程与官方仓库 →</a>
+          </div>
+        ))}
+      </div>
+
+      <div class="table-scroll">
+        <table class="academy-table">
+          <thead>
+            <tr>
+              <th>品牌名称</th>
+              <th>Windows</th>
+              <th>macOS</th>
+              <th>Android</th>
+              <th>iOS / iPadOS</th>
+              <th>第三方 Clash 订阅</th>
+            </tr>
+          </thead>
+          <tbody>
+            {AIRPORTS.slice(0, 8).map((b) => (
+              <tr>
+                <td><a href={`/airports/${b.slug}/`}><strong>{b.name}</strong></a></td>
+                <td>{b.devices.windows.label}</td>
+                <td>{b.devices.macos.label}</td>
+                <td>{b.devices.android.label}</td>
+                <td>{b.devices.ios.label}</td>
+                <td>{b.subscriptionPolicy.thirdPartySupported ? '支持' : '受限/官方端为主'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:0.85rem;text-align:right;">
+        <a href="/tools/device-check/" class="btn btn-sm btn-secondary">打开设备兼容性交互查询（含全部18家） →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 & 17. 校园网与宿舍网络安全 -->
+  <section class="section-block">
+    <div class="container grid-2">
+      <div class="notebook-card">
+        <div class="section-kicker">16 · 校园网使用知识</div>
+        <h2>校园网一定能用吗？客观原因解析</h2>
+        <p>
+          不同高校校园网在认证方式（Portal / 802.1X）、UDP 端口限流与出口策略上差异很大，没有任何机场能承诺在所有校园网上 100% 可用。如遇弹不出学号登录页，请先彻底关闭代理再认证。
+        </p>
+        <a href="/campus-network/compatibility/" class="btn btn-sm btn-secondary">阅读校园网客观说明 →</a>
+      </div>
+      <div class="notebook-card">
+        <div class="section-kicker">17 · 宿舍网络及安全知识</div>
+        <h2>宿舍 WiFi 优化与隐私保护底线</h2>
+        <p>
+          宿舍晚高峰网慢时先排查 2.4GHz 干扰或有线网线连接；遵守所在高校网络管理条例，不在机房公共电脑保留订阅链接，不同平台使用独立密码。
+        </p>
+        <a href="/campus-network/safety/" class="btn btn-sm btn-secondary">查看宿舍网络安全须知 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18 & 19. AI学习课堂 & 海外公开课程与学术文献 -->
+  <section class="section-block">
+    <div class="container grid-2">
+      <div class="academy-card">
+        <div class="section-kicker">18 · AI 学习课堂</div>
+        <h2>ChatGPT、Claude 与 Gemini 学生使用须知</h2>
+        <p>
+          不同 AI 平台对服务地区与 IP 纯净度有各自的官方政策。使用前请核对平台受支持地区列表，遵守学校关于 AI 辅助学术写作的规范，切勿输入涉密实验数据。
+        </p>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <a href="/study/chatgpt/" class="btn btn-sm btn-soft">ChatGPT 指南</a>
+          <a href="/study/claude/" class="btn btn-sm btn-soft">Claude 说明</a>
+          <a href="/study/gemini/" class="btn btn-sm btn-soft">Gemini 注意事项</a>
+        </div>
+      </div>
+      <div class="academy-card">
+        <div class="section-kicker">19 · 海外公开课程与学术文献</div>
+        <h2>开放获取（OA）文献与名校公开课指南</h2>
+        <p>
+          优先善用学校图书馆校外访问通道以及 arXiv、PubMed Central、DOAJ、MIT OpenCourseWare 等合法免费开放资源。看公开课视频建议锁定 720P/1080P 与 1x 节点。
+        </p>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <a href="/study/academic-research/" class="btn btn-sm btn-soft">英文文献准备</a>
+          <a href="/study/open-courses/" class="btn btn-sm btn-soft">免费公开课</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 20. 学姐智能故障排查 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="senpai-dialogue">
+        <div class="senpai-dialogue-avatar">
+          <SakielCharacter state="qa" size={80} />
+        </div>
+        <div style="flex:1;">
+          <div class="section-kicker">20 · 学姐智能故障排查</div>
+          <h2>遇到连接失败、订阅为空、节点超时或校园网冲突？</h2>
+          <p>
+            选择你的操作系统、客户端与具体错误现象，学姐立即给出安全的基础排查步骤（本站绝不收集你的订阅链接或账号密码）。
+          </p>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+            <a href="/tools/troubleshooter/" class="btn btn-primary btn-sm">🩺 启动智能故障排查助手</a>
+            <a href="/troubleshooting/timeout/" class="btn btn-soft btn-sm">节点超时排查</a>
+            <a href="/troubleshooting/empty-config/" class="btn btn-soft btn-sm">Clash配置为空</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 21. 全部18家机场品牌资料 -->
+  <section class="section-block" id="all-brands">
+    <div class="container">
+      <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <div class="section-kicker">21 · 全部 18 家机场品牌档案</div>
+          <h2>已核验品牌基础资料库（按资料导入顺序排列，非排名）</h2>
+        </div>
+        <a href="/airports/" class="btn btn-sm btn-secondary">进入完整品牌对比库 →</a>
+      </div>
+      <div class="grid-3">
+        {evaluatedBrands.map(({ brand: b, eval: ev }) => (
+          <div class="academy-card brand-mini-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.5rem;">
+              <div style="display:flex;gap:0.35rem;align-items:center;flex-wrap:wrap;">
+                <span class="badge badge-sakura">#{String(b.order).padStart(2, '0')}</span>
+                <span class="badge badge-mint">✓ 已核验</span>
+                <span class="badge badge-purple">友好度 {ev.totalScore ?? '—'} 分</span>
+              </div>
+              <small style="color:var(--text-muted);">核验：{b.priceDate}</small>
+            </div>
+
+            <h3 style="margin-bottom:0.2rem;">
+              <a href={`/airports/${b.slug}/`}>{b.name}</a>
+              <small style="font-size:0.78rem;font-weight:500;color:var(--text-muted);margin-left:0.35rem;">{b.englishName}</small>
+            </h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);margin-bottom:0.65rem;line-height:1.5;">
+              {b.summary.slice(0, 62)}…
+            </p>
+
+            <div class="brand-meta-box">
+              <div><strong>价格门槛：</strong>月付 {b.minMonthlyPrice ? `¥${b.minMonthlyPrice}起` : '无纯月付'} · 年付 {b.minYearlyPrice ? `¥${b.minYearlyPrice}起` : '无'}（共 {b.plans.length} 套）</div>
+              <div><strong>节点地区：</strong>{b.regions.slice(0, 5).join('、')}{b.regions.length > 5 ? ' 等' : ''}</div>
+              <div><strong>线路协议：</strong>{b.lines.slice(0, 2).join(' / ')} · {b.protocols.slice(0, 3).join(' / ')}</div>
+              <div><strong>设备支持：</strong>Win / Mac / Android / iOS 明确支持（{b.concurrentDevices}）</div>
+              <div><strong>优惠码：</strong><code>{b.couponCode}</code> · <strong>第三方订阅：</strong>支持</div>
+            </div>
+
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.85rem;">
+              <a href={`/airports/${b.slug}/`} class="btn btn-sm btn-soft">查看学院档案</a>
+              <a href={b.affUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-sm btn-primary">直达官网 ↗</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 22. 原创知识阅读中心 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">22 · 原创知识阅读中心</div>
+        <h2>精选必读课堂文章（共 {ALL_ARTICLES.length} 篇持续维护）</h2>
+      </div>
+      <div class="grid-3">
+        {ALL_ARTICLES.slice(0, 9).map((art) => (
+          <a href={art.url} class="academy-card">
+            <span class="badge badge-purple" style="margin-bottom:0.45rem;">{art.categoryName}</span>
+            <h3 style="font-size:1.02rem;">{art.title}</h3>
+            <p style="font-size:0.86rem;margin-bottom:0.4rem;">{art.description.slice(0, 72)}…</p>
+            <small style="color:var(--text-muted);">阅读约 {art.readTime} · 更新 {art.updatedAt}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 23. 30项首页FAQ -->
+  <section class="section-block" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">23 · 樱羽学姐的 30 个新生常见答疑</div>
+        <h2>30项首页高频问题 FAQ（全部正文直接可读）</h2>
+      </div>
+      <div class="faq-list">
+        {HOMEPAGE_FAQS.map((faq) => (
+          <details class="faq-item academy-card" open={faq.id <= 3}>
+            <summary class="faq-question">
+              <span class="faq-num">Q{String(faq.id).padStart(2, '0')}</span>
+              <span>{faq.question}</span>
+            </summary>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+              <a href={faq.relatedUrl} class="faq-link">✿ {faq.relatedLabel} →</a>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 24. 学习进度、作者介绍、编辑原则、资料来源及更新记录 -->
+  <section class="section-block">
+    <div class="container">
+      <div class="notebook-card">
+        <div class="section-kicker">24 · 学院档案与可信度说明</div>
+        <h2>学习进度、编辑原则、资料来源及更新记录</h2>
+        <div class="grid-2" style="margin-top:1rem;">
+          <div>
+            <h3>关于作者与虚构角色</h3>
+            <p>
+              <strong>jcxueyuan.blog（机场学院）</strong> 由独立的网络工具知识编辑组维护。SAKIEL（樱羽学姐）与 MOCHI（樱团）为本站原创虚构品牌向导角色，不冒充真实高校教师、学生或认证技术专家。
+            </p>
+            <h3>编辑独立性与三站定位</h3>
+            <p>
+              本站专注于学生低预算选购、零基础入门与故障排查，所有推荐评分均基于公开权重计算，与推广佣金完全隔离。
+            </p>
+          </div>
+          <div>
+            <h3>资料来源与更新机制</h3>
+            <p>
+              18 家品牌基础价格与政策字段源自项目公开档案及历史核验记录（各页面均已明确标注核验日期），不将历史记录伪装为实时结算价。开源客户端资料均核对官方 GitHub 仓库或商店页面。
+            </p>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.75rem;">
+              <a href="/profile/" class="btn btn-sm btn-primary">🎀 查看我的学习进度</a>
+              <a href="/methodology/" class="btn btn-sm btn-secondary">推荐与编辑标准</a>
+              <a href="/updates/" class="btn btn-sm btn-soft">资料更新记录</a>
+              <a href="/disclosure/" class="btn btn-sm btn-soft">推广关系说明</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    padding: 2.25rem 0 1.5rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--rose-deep);
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-en-slogan {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-lead {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.35rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .hero-visual {
+    position: relative;
+    padding: 0.75rem;
+    overflow: hidden;
+    background: linear-gradient(160deg, rgba(255, 248, 242, 0.92) 0%, rgba(253, 235, 242, 0.85) 55%, rgba(217, 208, 235, 0.55) 100%);
+  }
+
+  .hero-sakiel-wrap {
+    position: relative;
+    border-radius: calc(var(--radius-lg) - 6px);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    max-height: 490px;
+    width: 100%;
+    box-shadow: 0 10px 28px rgba(87, 70, 92, 0.12);
+  }
+
+  .hero-sakiel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+  }
+
+  .hero-mochi-badge {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 252, 249, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--sakura-pink);
+    border-radius: var(--radius-md);
+    padding: 0.65rem 0.95rem;
+    margin: -1.8rem 0.75rem 0.25rem;
+    box-shadow: 0 6px 20px rgba(173, 85, 125, 0.14);
+  }
+
+  .mochi-speech {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.84rem;
+    line-height: 1.4;
+  }
+
+  .mochi-speech strong {
+    color: var(--rose-deep);
+  }
+
+  .stats-strip {
+    margin-top: 1.75rem;
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .stat-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--rose-deep);
+  }
+
+  .stat-item span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .step-card h3 {
+    margin-top: 0.65rem;
+  }
+
+  .chapter-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .chapter-art-wrap {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 26px;
+    border-radius: var(--radius-pill);
+    background: var(--rose-soft-bg);
+    color: var(--rose-deep);
+    font-size: 0.8rem;
+  }
+
+  .faq-answer {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border-sakura);
+    font-size: 0.94rem;
+  }
+
+  .faq-link {
+    font-size: 0.86rem;
+    font-weight: 600;
+  }
+
+  .brand-mini-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .brand-meta-box {
+    background: var(--cream-white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.28rem;
+    line-height: 1.45;
+  }
+
+  .brand-meta-box strong {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .stats-strip {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .chapter-card {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

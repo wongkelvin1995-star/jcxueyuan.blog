@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SakielCharacter from '../components/art/SakielCharacter.astro';
+---
+
+<BaseLayout
+  title="页面未找到 (404)｜机场学院"
+  description="樱羽学姐提示：你访问的校园教室或文章页面暂未找到，可以返回首页或使用全站搜索。"
+  noIndex={true}
+>
+  <section class="section-block">
+    <div class="container" style="text-align:center;max-width:680px;">
+      <div class="glass-panel" style="padding:2.5rem 1.5rem;">
+        <div style="display:flex;justify-content:center;margin-bottom:1rem;">
+          <SakielCharacter state="thinking" size={200} />
+        </div>
+        <span class="badge badge-sakura">404 · 迷路在樱花大道啦</span>
+        <h1 style="margin-top:0.65rem;">这间教室暂时没有找到哦</h1>
+        <p>可能是网址输入有误，或者课程页面已经整理到新的专题目录中。让樱羽学姐带你回首页或用搜索找找吧！</p>
+        <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.25rem;">
+          <a href="/" class="btn btn-primary">🌸 返回学院首页</a>
+          <a href="/search/" class="btn btn-secondary">🔍 全站智能搜索</a>
+          <a href="/courses/" class="btn btn-soft">📚 浏览十大课程</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

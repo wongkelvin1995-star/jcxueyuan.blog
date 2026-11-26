@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import StudentBudgetTool from '../../../components/tools/StudentBudgetTool';
+import { AIRPORTS } from '../../../data/airports';
+---
+
+<BaseLayout
+  title="学生消费预算规划器 · Student Budget｜机场学院"
+  description="输入每月生活费预算、使用月数与付款周期，实时筛选18家已核验机场数据库中的真实匹配套餐。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '学生专区', url: '/student/' }, { label: '学生预算规划器' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>学生消费预算规划器 · Student Budget</h1>
+      <p>先算清总支出与预付风险，再依据 18 家品牌真实套餐数据筛选合适方案。</p>
+      <StudentBudgetTool client:load brands={AIRPORTS} />
+    </div>
+  </section>
+</BaseLayout>

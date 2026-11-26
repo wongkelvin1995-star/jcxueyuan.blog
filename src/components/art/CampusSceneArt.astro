@@ -1,0 +1,69 @@
+---
+export interface Props {
+  chapter: number;
+  title?: string;
+}
+
+const { chapter = 1, title = '校园场景' } = Astro.props;
+
+const palettes: Record<number, { skyTop: string; skyBot: string; accent: string; sub: string }> = {
+  1: { skyTop: '#EBF5FB', skyBot: '#FDEBF2', accent: '#F2B8CD', sub: '#AD557D' },
+  2: { skyTop: '#FFF8F2', skyBot: '#F7E7D5', accent: '#E4C69D', sub: '#9C6F38' },
+  3: { skyTop: '#FDF4F8', skyBot: '#EFE9F7', accent: '#D9D0EB', sub: '#6A4E94' },
+  4: { skyTop: '#EFF8F3', skyBot: '#E2F1EA', accent: '#B9D9C8', sub: '#2E6B4C' },
+  5: { skyTop: '#FAF3EA', skyBot: '#F2DFC8', accent: '#E4C69D', sub: '#7D5821' },
+  6: { skyTop: '#E5F3FB', skyBot: '#D9ECFA', accent: '#A9D5EB', sub: '#2B6282' },
+  7: { skyTop: '#F3EEFA', skyBot: '#FCEBF2', accent: '#D9D0EB', sub: '#6F498C' },
+  8: { skyTop: '#EAE6F3', skyBot: '#D5D8EB', accent: '#A9D5EB', sub: '#48456A' },
+  9: { skyTop: '#E3ECFA', skyBot: '#EDE4FA', accent: '#A9D5EB', sub: '#4D4791' },
+  10: { skyTop: '#FADCE4', skyBot: '#F7DFC2', accent: '#E4C69D', sub: '#AD557D' },
+};
+
+const p = palettes[chapter] || palettes[1];
+---
+
+<svg
+  viewBox="0 0 420 180"
+  class="campus-scene-svg"
+  role="img"
+  aria-label={title}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id={`sceneSky-${chapter}`} x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color={p.skyTop} />
+      <stop offset="100%" stop-color={p.skyBot} />
+    </linearGradient>
+  </defs>
+
+  <rect width="420" height="180" rx="16" fill={`url(#sceneSky-${chapter})`} />
+
+  <!-- Soft Sunlight / Moon Glow -->
+  <circle cx="340" cy="46" r="28" fill="#FFFDF9" opacity="0.72" />
+  <circle cx="340" cy="46" r="42" fill={p.accent} opacity="0.22" />
+
+  <!-- Campus Architecture Silhouette -->
+  <path d="M0 148 L70 112 L135 124 L210 92 L285 118 L355 102 L420 132 L420 180 L0 180 Z" fill="#FFFFFF" opacity="0.58" />
+  <rect x="65" y="102" width="84" height="58" rx="4" fill="#FFFDF9" stroke={p.sub} stroke-opacity="0.22" stroke-width="1.2" />
+  <polygon points="58,102 107,74 156,102" fill={p.accent} opacity="0.75" />
+  <!-- Classroom Windows -->
+  <rect x="78" y="114" width="14" height="16" rx="2" fill="#A9D5EB" opacity="0.65" />
+  <rect x="100" y="114" width="14" height="16" rx="2" fill="#A9D5EB" opacity="0.65" />
+  <rect x="122" y="114" width="14" height="16" rx="2" fill="#A9D5EB" opacity="0.65" />
+
+  <!-- Sakura Tree Canopy -->
+  <circle cx="34" cy="78" r="34" fill="#F2B8CD" opacity="0.65" />
+  <circle cx="58" cy="64" r="26" fill="#F8D2E0" opacity="0.78" />
+  <circle cx="388" cy="116" r="30" fill="#F2B8CD" opacity="0.55" />
+
+  <!-- Floating Petals -->
+  <ellipse cx="170" cy="52" rx="5" ry="2.8" transform="rotate(24 170 52)" fill="#F2B8CD" />
+  <ellipse cx="235" cy="72" rx="4.5" ry="2.5" transform="rotate(-18 235 72)" fill="#F2B8CD" />
+  <ellipse cx="288" cy="44" rx="5" ry="2.8" transform="rotate(35 288 44)" fill="#F2B8CD" />
+
+  <!-- Chapter Badge -->
+  <rect x="16" y="14" width="76" height="24" rx="12" fill="#FFFFFF" fill-opacity="0.88" />
+  <text x="54" y="30" text-anchor="middle" font-size="11" font-weight="700" fill={p.sub}>
+    CH.{String(chapter).padStart(2, '0')}
+  </text>
+</svg>

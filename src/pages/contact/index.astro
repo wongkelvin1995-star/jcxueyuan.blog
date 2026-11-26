@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="联系与数据纠错｜机场学院"
+  description="如发现品牌套餐价格变动、优惠码失效、教程版本过时或描述错误，欢迎通过纠错反馈机制通知我们核验修正。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '联系与纠错' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>联系与数据纠错入口</h1>
+      <div class="notebook-card">
+        <p>
+          机场行业套餐价格、优惠码与客户端版本变动较快。如果你在阅读本站档案或教程时发现任何与官方最新页面不一致之处，请协助我们记录以下信息以便核验更新：
+        </p>
+        <ul>
+          <li>问题页面 URL（例如 `/airports/lingdongyun/` 或教程地址）</li>
+          <li>具体变更内容（如套餐调价、优惠码过期、退款条款变更或开源软件新版本）</li>
+          <li>可核验的官方来源说明（切勿发送你的个人订阅链接、密码或截图隐私信息）</li>
+        </ul>
+        <p style="margin-bottom:0;">
+          纠错反馈邮箱：<code>editorial@jcxueyuan.blog</code>（收到核验证据后，我们将在资料更新记录页面同步修正日期）。
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { AIRPORTS, evaluateStudentFriendliness } from '../../data/airports';
+---
+
+<BaseLayout
+  title="全部18家机场品牌数据库｜机场学院"
+  description="机场学院收录的18家机场品牌基础资料库，包含真实套餐价格、月付门槛、流量配额、客户端兼容性、退款政策与优惠码核验记录。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '全部机场品牌' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>全部 18 家机场品牌基础资料库</h1>
+      <p>
+        以下编号仅为资料导入顺序，不代表主观排名。所有价格、优惠码与设备支持字段均源自公开核验档案，并与推广佣金完全独立。
+      </p>
+
+      <div class="table-scroll" style="margin-bottom:2rem;">
+        <table class="academy-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>品牌名称</th>
+              <th>核验状态</th>
+              <th>学生友好度</th>
+              <th>月付起步</th>
+              <th>年付起步</th>
+              <th>优惠码</th>
+              <th>核验日期</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            {AIRPORTS.map((b) => {
+              const ev = evaluateStudentFriendliness(b);
+              return (
+                <tr>
+                  <td>#{String(b.order).padStart(2, '0')}</td>
+                  <td><a href={`/airports/${b.slug}/`}><strong>{b.name}</strong></a></td>
+                  <td><span class="badge badge-mint">✓ 已核验</span></td>
+                  <td><span class="badge badge-purple">{ev.totalScore ?? '—'} 分</span></td>
+                  <td>{b.minMonthlyPrice ? `¥${b.minMonthlyPrice}/月` : '无纯月付'}</td>
+                  <td>{b.minYearlyPrice ? `¥${b.minYearlyPrice}/年` : '无'}</td>
+                  <td><code>{b.couponCode}</code></td>
+                  <td>{b.priceDate}</td>
+                  <td>
+                    <a href={`/airports/${b.slug}/`} class="btn btn-sm btn-soft">学院档案</a>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

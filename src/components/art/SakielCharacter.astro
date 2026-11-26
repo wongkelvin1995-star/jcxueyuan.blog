@@ -1,0 +1,71 @@
+---
+export interface Props {
+  state?: 'welcome' | 'teaching' | 'thinking' | 'laptop' | 'qa' | 'encourage';
+  className?: string;
+  alt?: string;
+  size?: number | string;
+}
+
+const {
+  state = 'welcome',
+  className = '',
+  alt = 'SAKIEL · 樱羽学姐原创角色立绘',
+  size = 360,
+} = Astro.props;
+
+const stateTitles: Record<string, string> = {
+  welcome: '微笑欢迎新生',
+  teaching: '手持书本认真讲解',
+  thinking: '思考问题',
+  laptop: '操作笔记本电脑',
+  qa: '温柔答疑',
+  encourage: '鼓励完成学习',
+};
+
+const stateImageMap: Record<string, string> = {
+  welcome: '/assets/sakiel-hero.jpg',
+  encourage: '/assets/sakiel-hero.jpg',
+  teaching: '/assets/sakiel-teaching.jpg',
+  qa: '/assets/sakiel-teaching.jpg',
+  laptop: '/assets/sakiel-laptop.jpg',
+  thinking: '/assets/sakiel-laptop.jpg',
+};
+
+const imgSrc = stateImageMap[state] || '/assets/sakiel-hero.jpg';
+const numericSize = typeof size === 'number' ? size : 360;
+const isAvatar = numericSize <= 130;
+---
+
+<img
+  src={imgSrc}
+  alt={`${alt}（${stateTitles[state] || '学习向导'}）`}
+  width={numericSize}
+  height={isAvatar ? numericSize : Math.round(numericSize * 1.25)}
+  class={`sakiel-art sakiel-${state} ${isAvatar ? 'sakiel-avatar-img' : 'sakiel-card-img'} ${className}`}
+  loading={isAvatar ? 'lazy' : 'eager'}
+  decoding="async"
+/>
+
+<style>
+  .sakiel-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 14%;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .sakiel-card-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 14%;
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--sakura-pink);
+    box-shadow: var(--shadow-card);
+    display: block;
+  }
+</style>

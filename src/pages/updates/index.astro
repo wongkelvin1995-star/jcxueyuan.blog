@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getDatabaseStats } from '../../data/airports';
+
+const stats = getDatabaseStats();
+---
+
+<BaseLayout
+  title="资料更新记录｜机场学院"
+  description="机场学院品牌数据库、客户端版本核验与原创知识文章的历史更新日志。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '资料更新记录' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <h1>资料更新与核验记录</h1>
+      <div class="notebook-card">
+        <h3>2026-11-26 · Sakura Academy MAX 首版上线核验</h3>
+        <ul>
+          <li>完成 {stats.brandCount} 家机场品牌基础资料、{stats.planCount} 个套餐价格、优惠码与原始推广链接导入与核验（历史公开记录基准日标明于各品牌档案）。</li>
+          <li>上线 10 大校园章节知识体系、50 词条基础术语词典、30 项首页高频 FAQ 及 8 大本地交互学习工具。</li>
+          <li>核对 Clash Verge Rev、v2rayN、Shadowrocket、FlClash、v2rayNG 官方仓库与商店说明。</li>
+        </ul>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:0;">
+          声明：本站不将 2026 年历史公开价格记录伪装为 2027 年实时结算价；后续将持续依据真实核验情况更新并记录日期。
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

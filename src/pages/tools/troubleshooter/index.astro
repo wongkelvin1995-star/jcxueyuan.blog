@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TroubleshooterTool from '../../../components/tools/TroubleshooterTool';
+import SakielCharacter from '../../../components/art/SakielCharacter.astro';
+---
+
+<BaseLayout
+  title="学姐智能故障排查 · Smart Troubleshooter｜机场学院"
+  description="选择系统、客户端与问题现象，获取安全的本地基础排查步骤。不收集订阅链接、密码或任何敏感凭证。"
+  breadcrumbs={[{ label: '首页', url: '/' }, { label: '学姐答疑', url: '/troubleshooting/' }, { label: '智能故障排查' }]}
+>
+  <section class="section-block">
+    <div class="container">
+      <div class="senpai-dialogue" style="margin-bottom:1.5rem;">
+        <div class="senpai-dialogue-avatar">
+          <SakielCharacter state="qa" size={80} />
+        </div>
+        <div>
+          <span class="badge badge-sakura">Smart Troubleshooter</span>
+          <h1 style="margin-top:0.35rem;margin-bottom:0.25rem;">学姐智能故障排查助手</h1>
+          <p style="margin:0;">请选择你的设备与遇到的问题。本工具仅提供安全排查建议，绝不收集订阅链接或声称已完成实时网络检测。</p>
+        </div>
+      </div>
+
+      <TroubleshooterTool client:load />
+    </div>
+  </section>
+</BaseLayout>
